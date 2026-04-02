@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "titulo": "Conjunto de Escovas 01",
+    "categoria": "Qualidade",
+    "data": "25/01/2026",
+    "descricao": "Falha na transmissão de movimento — eixo motor desacoplado do conjunto de escovas. Identificação de 5 pontos críticos e correção estrutural.",
+    "link": "https://gestao-de-manutencao-5a337.web.app/melhorias"
+  },
+  {
+    "id": 2,
+    "titulo": "Torre de Refrigeração",
+    "categoria": "Processo",
+    "data": "07/01/2026",
+    "descricao": "Água distribuída de forma irregular, reduzindo eficiência do resfriamento. Correção nos pontos de saída e ajuste das coméias.",
+    "link": "https://gestao-de-manutencao-5a337.web.app/melhorias"
+  },
+  {
+    "id": 3,
+    "titulo": "Reforma Misturador 01",
+    "categoria": "Produtividade",
+    "data": "30/12/2025",
+    "descricao": "Reforma completa: rolamentos, eixo helicoidal, resistências elétricas e reforço estrutural. Confiabilidade operacional restabelecida.",
+    "link": "https://gestao-de-manutencao-5a337.web.app/melhorias"
+  }
+]
