@@ -37,7 +37,7 @@
   .hero-right::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(46,204,113,0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(26,122,74,0.2) 0%, transparent 50%); }
   .hero-visual { position: relative; z-index: 2; padding: 3rem; width: 100%; max-width: 460px; }
   .stat-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 1.5rem; margin-bottom: 1rem; backdrop-filter: blur(10px); animation: slideLeft 0.6s ease both; }
-  .stat-card:nth-child(1) { animation-delay: 0.2s; } .stat-card:nth-child(2) { animation-delay: 0.35s; } .stat-card:nth-child(3) { animation-delay: 0.5s; }
+  .stat-card:nth-child(1){animation-delay:0.2s} .stat-card:nth-child(2){animation-delay:0.35s} .stat-card:nth-child(3){animation-delay:0.5s}
   .stat-card-label { font-size: 0.72rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 0.5rem; }
   .stat-card-value { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--green-light); line-height: 1; }
   .stat-card-desc { font-size: 0.8rem; color: rgba(255,255,255,0.55); margin-top: 0.3rem; }
@@ -75,7 +75,6 @@
   .produto-url { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 2rem; padding: 1rem 2rem; background: var(--green); color: white; border-radius: 10px; font-family: 'Syne', sans-serif; font-weight: 700; text-decoration: none; font-size: 0.9rem; transition: all 0.2s; }
   .produto-url:hover { background: var(--dark); transform: translateY(-2px); }
 
-  /* ===== MELHORIAS ===== */
   .melhorias { background: var(--white); }
   .melhorias-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
   .melhorias-count { font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--muted); }
@@ -122,17 +121,17 @@
 
   footer { background: #080f0b; text-align: center; padding: 1.5rem; font-size: 0.75rem; color: rgba(255,255,255,0.25); }
 
-  @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
-  @keyframes slideLeft { from { opacity:0; transform:translateX(30px); } to { opacity:1; transform:translateX(0); } }
-  @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+  @keyframes slideLeft { from{opacity:0;transform:translateX(30px)} to{opacity:1;transform:translateX(0)} }
+  @keyframes fadeIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
 
   @media (max-width: 900px) {
-    nav { padding: 1rem 1.5rem; } .nav-links { display: none; }
-    .hero { grid-template-columns: 1fr; } .hero-left { padding: 4rem 1.5rem 3rem; } .hero-right { min-height: 380px; }
-    .section { padding: 4rem 1.5rem; } .produto-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .skills-grid { grid-template-columns: 1fr 1fr; } .melhorias-grid { grid-template-columns: 1fr; }
+    nav{padding:1rem 1.5rem} .nav-links{display:none}
+    .hero{grid-template-columns:1fr} .hero-left{padding:4rem 1.5rem 3rem} .hero-right{min-height:380px}
+    .section{padding:4rem 1.5rem} .produto-grid{grid-template-columns:1fr;gap:2rem}
+    .skills-grid{grid-template-columns:1fr 1fr} .melhorias-grid{grid-template-columns:1fr}
   }
-  @media (max-width: 580px) { .skills-grid { grid-template-columns: 1fr; } }
+  @media (max-width:580px){.skills-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -208,7 +207,6 @@
   </div>
 </section>
 
-<!-- ===== MELHORIAS ===== -->
 <section class="section melhorias" id="melhorias">
   <div class="melhorias-header">
     <div>
@@ -218,9 +216,7 @@
     <div class="melhorias-count" id="melhorias-count"></div>
   </div>
   <div class="filtros" id="filtros"></div>
-  <div class="melhorias-grid" id="melhorias-grid">
-    <div class="melhorias-vazio">Carregando melhorias...</div>
-  </div>
+  <div class="melhorias-grid" id="melhorias-grid"></div>
 </section>
 
 <section class="section" id="skills">
@@ -246,27 +242,50 @@
 <footer>© 2026 Wanderson Carvalho Teixeira — Manutenção Industrial & Tecnologia</footer>
 
 <script>
-var todasMelhorias = [];
-var categoriaAtiva = 'Todos';
-
-var FALLBACK = [
-  { id:1, titulo:"Conjunto de Escovas 01", categoria:"Qualidade", data:"25/01/2026", descricao:"Falha na transmissão de movimento — eixo motor desacoplado. 5 pontos críticos identificados e corrigidos.", link:"https://leafy-kashata-1adf57.netlify.app/" },
-  { id:2, titulo:"Torre de Refrigeração", categoria:"Processo", data:"07/01/2026", descricao:"Água distribuída irregularmente, reduzindo eficiência do resfriamento. Correção nos pontos de saída e ajuste das coméias.", link:"https://silly-bublanina-55f5b1.netlify.app/" },
-  { id:3, titulo:"Reforma Misturador 01", categoria:"Produtividade", data:"30/12/2025", descricao:"Reforma completa: rolamentos, eixo helicoidal, resistências elétricas e reforço estrutural. Confiabilidade restabelecida.", link:"https://wctmanutencao-lab.github.io/Misturador-01" }
- { id:4, titulo:"Bomba de circulação de água fábrica", categoria:"Processo", data:"03/11/2025", descricao:"Problema crônico sem solução Desde antes da chegada do técnico, a bomba de circulação travava de forma recorrente causando paradas gerais da fábrica. O problema era tratado de forma reativa — destravar e retomar — sem investigação da causa raiz.", link:"https://remarkable-florentine-9a2610.netlify.app/" }  
+// ========================================
+// MELHORIAS — edite aqui para adicionar novas
+// ========================================
+var MELHORIAS = [
+  {
+    id: 1,
+    titulo: "Conjunto de Escovas 01",
+    categoria: "Qualidade",
+    data: "25/01/2026",
+    descricao: "Falha na transmissão de movimento — eixo motor desacoplado do conjunto de escovas. Identificação de 5 pontos críticos e correção estrutural.",
+    link: "https://leafy-kashata-1adf57.netlify.app/"
+  },
+  {
+    id: 2,
+    titulo: "Torre de Refrigeração",
+    categoria: "Processo",
+    data: "07/01/2026",
+    descricao: "Água distribuída de forma irregular, reduzindo eficiência do resfriamento. Correção nos pontos de saída e ajuste das coméias.",
+    link: "https://silly-bublanina-55f5b1.netlify.app/"
+  },
+  {
+    id: 3,
+    titulo: "Reforma Misturador 01",
+    categoria: "Produtividade",
+    data: "30/12/2025",
+    descricao: "Reforma completa: rolamentos, eixo helicoidal, resistências elétricas e reforço estrutural. Confiabilidade operacional restabelecida.",
+    link: "https://wctmanutencao-lab.github.io/Misturador-01"
+  },
+  {
+    id: 4,
+    titulo: "Bomba de circulação de água fábrica",
+    categoria: "Processo",
+    data: "02/11/2025",
+    descricao: "Problema crônico sem solução — bomba travava de forma recorrente causando paradas gerais da fábrica. Investigação da causa raiz e correção definitiva.",
+    link: "https://remarkable-florentine-9a2610.netlify.app/"
+  }
 ];
+// ========================================
 
-
-function carregarMelhorias() {
-  fetch('melhorias.json')
-    .then(function(r) { if (!r.ok) throw new Error(); return r.json(); })
-    .then(function(d) { todasMelhorias = d; renderizar(); })
-    .catch(function() { todasMelhorias = FALLBACK; renderizar(); });
-}
+var categoriaAtiva = 'Todos';
 
 function renderizar() {
   var cats = ['Todos'];
-  todasMelhorias.forEach(function(m) { if (cats.indexOf(m.categoria) === -1) cats.push(m.categoria); });
+  MELHORIAS.forEach(function(m) { if (cats.indexOf(m.categoria) === -1) cats.push(m.categoria); });
 
   var filtrosEl = document.getElementById('filtros');
   filtrosEl.innerHTML = '';
@@ -278,8 +297,7 @@ function renderizar() {
     filtrosEl.appendChild(btn);
   });
 
-  var lista = categoriaAtiva === 'Todos' ? todasMelhorias : todasMelhorias.filter(function(m) { return m.categoria === categoriaAtiva; });
-
+  var lista = categoriaAtiva === 'Todos' ? MELHORIAS : MELHORIAS.filter(function(m) { return m.categoria === categoriaAtiva; });
   document.getElementById('melhorias-count').textContent = lista.length + ' melhoria' + (lista.length !== 1 ? 's' : '');
 
   var grid = document.getElementById('melhorias-grid');
@@ -287,10 +305,10 @@ function renderizar() {
 
   grid.innerHTML = '';
   lista.forEach(function(m, i) {
-    var cat = m.categoria.replace(/\s/g,'').replace(/ã/g,'a').replace(/ç/g,'c');
+    var cat = m.categoria.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s/g,'');
     var card = document.createElement('div');
     card.className = 'melhoria-card';
-    card.style.cssText = 'animation: fadeIn 0.4s ' + (i * 0.07) + 's ease both; opacity:0;';
+    card.style.cssText = 'animation:fadeIn 0.4s ' + (i*0.07) + 's ease both;opacity:0';
     card.innerHTML =
       '<div class="melhoria-top">' +
         '<span class="cat-badge cat-' + cat + '">' + m.categoria + '</span>' +
@@ -306,7 +324,7 @@ function renderizar() {
   });
 }
 
-carregarMelhorias();
+renderizar();
 </script>
 </body>
 </html>
