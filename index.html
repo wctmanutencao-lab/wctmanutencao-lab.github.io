@@ -75,6 +75,60 @@
   .produto-url { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 2rem; padding: 1rem 2rem; background: var(--green); color: white; border-radius: 10px; font-family: 'Syne', sans-serif; font-weight: 700; text-decoration: none; font-size: 0.9rem; transition: all 0.2s; }
   .produto-url:hover { background: var(--dark); transform: translateY(-2px); }
 
+  /* EXPLORE HUB */
+  .explore { background: var(--dark); }
+  .explore .section-tag { background: rgba(46,204,113,0.15); border-color: rgba(46,204,113,0.3); color: var(--green-light); }
+  .explore .section-title { color: white; }
+  .explore-desc { color: rgba(255,255,255,0.45); font-size: 0.95rem; line-height: 1.7; margin-top: 0.8rem; max-width: 560px; }
+  .explore-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .explore-card { border-radius: 20px; padding: 2rem; text-decoration: none; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: transform 0.25s, box-shadow 0.25s; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.04); cursor: pointer; }
+  .explore-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
+  .explore-card::before { content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s; }
+  .explore-card:hover::before { opacity: 1; }
+  .explore-card.melhorias-card::before { background: radial-gradient(circle at 20% 50%, rgba(46,204,113,0.12), transparent 70%); }
+  .explore-card.sistema-card::before { background: radial-gradient(circle at 80% 30%, rgba(26,122,74,0.15), transparent 70%); }
+  .explore-card.planta-card::before { background: radial-gradient(circle at 20% 80%, rgba(0,188,212,0.1), transparent 70%); }
+  .explore-card.treino-card::before { background: radial-gradient(circle at 80% 70%, rgba(240,165,0,0.1), transparent 70%); }
+  .explore-card-icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 1.2rem; position: relative; z-index: 1; }
+  .melhorias-card .explore-card-icon { background: rgba(46,204,113,0.15); border: 1px solid rgba(46,204,113,0.25); }
+  .sistema-card .explore-card-icon { background: rgba(26,122,74,0.2); border: 1px solid rgba(26,122,74,0.3); }
+  .planta-card .explore-card-icon { background: rgba(0,188,212,0.12); border: 1px solid rgba(0,188,212,0.2); }
+  .treino-card .explore-card-icon { background: rgba(240,165,0,0.12); border: 1px solid rgba(240,165,0,0.2); }
+  .explore-card-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem; color: white; margin-bottom: 0.5rem; position: relative; z-index: 1; }
+  .explore-card-desc { font-size: 0.83rem; line-height: 1.6; color: rgba(255,255,255,0.45); flex: 1; position: relative; z-index: 1; }
+  .explore-card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.2rem; position: relative; z-index: 1; }
+  .explore-tag { font-size: 0.68rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 50px; }
+  .melhorias-card .explore-tag { background: rgba(46,204,113,0.15); color: var(--green-light); border: 1px solid rgba(46,204,113,0.2); }
+  .sistema-card .explore-tag { background: rgba(46,204,113,0.12); color: #81c784; border: 1px solid rgba(46,204,113,0.15); }
+  .planta-card .explore-tag { background: rgba(0,188,212,0.12); color: #4dd0e1; border: 1px solid rgba(0,188,212,0.15); }
+  .treino-card .explore-tag { background: rgba(240,165,0,0.12); color: #ffd54f; border: 1px solid rgba(240,165,0,0.15); }
+  .explore-card-arrow { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.2); transition: all 0.2s; z-index: 1; }
+  .explore-card:hover .explore-card-arrow { color: rgba(255,255,255,0.7); transform: translate(3px,-3px); }
+  .badge-em-breve { position: absolute; bottom: 1.5rem; right: 1.5rem; font-size: 0.65rem; font-weight: 700; padding: 0.2rem 0.7rem; border-radius: 50px; background: rgba(240,165,0,0.15); color: #ffd54f; border: 1px solid rgba(240,165,0,0.2); z-index: 1; }
+  .badge-live { position: absolute; bottom: 1.5rem; right: 1.5rem; font-size: 0.65rem; font-weight: 700; padding: 0.2rem 0.7rem; border-radius: 50px; background: rgba(46,204,113,0.15); color: var(--green-light); border: 1px solid rgba(46,204,113,0.2); z-index: 1; }
+
+  /* PLANTA */
+  .planta-section { background: #091523; }
+  .planta-section .section-tag { background: rgba(0,188,212,0.12); border-color: rgba(0,188,212,0.25); color: #4dd0e1; }
+  .planta-section .section-title { color: white; }
+  .planta-section .section-title span { color: #4dd0e1; }
+  .planta-preview { margin-top: 2.5rem; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,188,212,0.2); }
+  .planta-screenshot { width: 100%; height: 360px; background: #0d1117; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+  .planta-screenshot::before { content: ''; position: absolute; inset: 0; background: linear-gradient(rgba(48,54,61,.3) 1px,transparent 1px),linear-gradient(90deg,rgba(48,54,61,.3) 1px,transparent 1px); background-size: 36px 36px; }
+  .planta-screenshot::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%,rgba(27,58,92,0.5),transparent 60%),radial-gradient(ellipse at 70% 30%,rgba(0,188,212,0.08),transparent 50%); }
+  .planta-demo { position: relative; z-index: 2; text-align: center; }
+  .planta-demo-icon { font-size: 3rem; margin-bottom: 1rem; }
+  .planta-demo-title { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 800; color: white; margin-bottom: 0.4rem; }
+  .planta-demo-sub { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+  .planta-info { padding: 1.5rem 2rem; background: rgba(255,255,255,0.03); border-top: 1px solid rgba(0,188,212,0.15); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  .planta-info-left { }
+  .planta-info-desc { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+  .planta-info-desc strong { color: #4dd0e1; }
+  .planta-uses { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.8rem; }
+  .planta-use-tag { font-size: 0.7rem; font-weight: 600; padding: 0.25rem 0.7rem; border-radius: 50px; background: rgba(0,188,212,0.08); color: #4dd0e1; border: 1px solid rgba(0,188,212,0.15); }
+  .planta-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0,188,212,0.15); color: #4dd0e1; border: 1px solid rgba(0,188,212,0.3); border-radius: 8px; padding: 0.7rem 1.5rem; font-size: 0.82rem; font-weight: 700; text-decoration: none; transition: all 0.2s; font-family: 'Syne', sans-serif; }
+  .planta-btn:hover { background: rgba(0,188,212,0.28); transform: translateY(-2px); }
+
   .melhorias { background: var(--white); }
   .melhorias-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
   .melhorias-count { font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--muted); }
@@ -133,6 +187,14 @@
   }
   @media (max-width:580px){.skills-grid{grid-template-columns:1fr}}
 </style>
+<!-- Google Analytics - Portfólio -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4EBPMSJ68V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4EBPMSJ68V');
+</script>
 </head>
 <body>
 
@@ -141,7 +203,9 @@
   <div class="nav-links">
     <a href="#jornada">Jornada</a>
     <a href="#mantto">Mantto</a>
+    <a href="#explore">Explorar</a>
     <a href="#melhorias">Melhorias</a>
+    <a href="#planta">Planta</a>
     <a href="#skills">Skills</a>
     <a href="#contato">Contato</a>
   </div>
@@ -154,7 +218,7 @@
     <p class="hero-sub">Mecânico industrial que evoluiu para a gestão de manutenção e foi além — desenvolveu do zero um sistema CMMS próprio. Unindo 10+ anos de experiência operacional com tecnologia real.</p>
     <div class="hero-ctas">
       <a href="#mantto" class="btn-primary">Ver o Mantto →</a>
-      <a href="#melhorias" class="btn-outline">Ver Melhorias</a>
+      <a href="#explore" class="btn-outline">Explorar conteúdo</a>
     </div>
   </div>
   <div class="hero-right">
@@ -206,6 +270,98 @@
     </div>
   </div>
 </section>
+
+<!-- EXPLORE HUB -->
+<section class="section explore" id="explore">
+  <div class="section-tag">Navegue pelo conteúdo</div>
+  <h2 class="section-title">O que você <span>encontra aqui</span></h2>
+  <p class="explore-desc">Casos reais, sistema próprio, planta interativa e em breve treinamentos — tudo produzido a partir da experiência prática na indústria.</p>
+  <div class="explore-grid">
+
+    <a href="#melhorias" class="explore-card melhorias-card">
+      <div class="explore-card-arrow">↗</div>
+      <div class="explore-card-icon">🔧</div>
+      <div class="explore-card-title">Melhorias</div>
+      <div class="explore-card-desc">Registros reais de intervenções com problema, solução, fotos e resultado. Cada caso documentado no Mantto.</div>
+      <div class="explore-card-tags">
+        <span class="explore-tag">Qualidade</span>
+        <span class="explore-tag">Processo</span>
+        <span class="explore-tag">Produtividade</span>
+      </div>
+      <div class="badge-live">● Ao vivo</div>
+    </a>
+
+    <a href="#mantto" class="explore-card sistema-card">
+      <div class="explore-card-arrow">↗</div>
+      <div class="explore-card-icon">💻</div>
+      <div class="explore-card-title">Sistema — Mantto</div>
+      <div class="explore-card-desc">CMMS desenvolvido do zero com React e Firebase. Ordens de serviço, estoque, KPIs e relatórios integrados.</div>
+      <div class="explore-card-tags">
+        <span class="explore-tag">React</span>
+        <span class="explore-tag">Firebase</span>
+        <span class="explore-tag">SaaS</span>
+      </div>
+      <div class="badge-live">● Ao vivo</div>
+    </a>
+
+    <a href="#planta" class="explore-card planta-card">
+      <div class="explore-card-arrow">↗</div>
+      <div class="explore-card-icon">🗺️</div>
+      <div class="explore-card-title">Planta Industrial</div>
+      <div class="explore-card-desc">Layout interativo da linha de produção. Usado para processo, segurança, manutenção e treinamentos.</div>
+      <div class="explore-card-tags">
+        <span class="explore-tag">Processo</span>
+        <span class="explore-tag">Segurança</span>
+        <span class="explore-tag">Manutenção</span>
+      </div>
+      <div class="badge-em-breve">Em desenvolvimento</div>
+    </a>
+
+    <a href="#skills" class="explore-card treino-card">
+      <div class="explore-card-arrow">↗</div>
+      <div class="explore-card-icon">📚</div>
+      <div class="explore-card-title">Treinamentos</div>
+      <div class="explore-card-desc">Materiais de capacitação baseados na planta e nos processos reais. Segurança, operação e manutenção preventiva.</div>
+      <div class="explore-card-tags">
+        <span class="explore-tag">NR-12</span>
+        <span class="explore-tag">Segurança</span>
+        <span class="explore-tag">Operação</span>
+      </div>
+      <div class="badge-em-breve">Em breve</div>
+    </a>
+
+  </div>
+</section>
+
+<!-- PLANTA -->
+<section class="section planta-section" id="planta">
+  <div class="section-tag">Layout Interativo</div>
+  <h2 class="section-title">Planta <span>Industrial</span></h2>
+  <div class="planta-preview">
+    <div class="planta-screenshot">
+      <div class="planta-demo">
+        <div class="planta-demo-icon">🏭</div>
+        <div class="planta-demo-title">Linha de Extrusão — Em desenvolvimento</div>
+        <div class="planta-demo-sub">Clique para explorar a versão atual</div>
+      </div>
+    </div>
+    <div class="planta-info">
+      <div class="planta-info-left">
+        <div class="planta-info-desc">Planta interativa com <strong>zoom, navegação e identificação de equipamentos</strong>. Em constante evolução.</div>
+        <div class="planta-uses">
+          <span class="planta-use-tag">🔄 Processo</span>
+          <span class="planta-use-tag">🛡️ Segurança</span>
+          <span class="planta-use-tag">⚙️ Manutenção</span>
+          <span class="planta-use-tag">📚 Treinamentos</span>
+        </div>
+      </div>
+      <a href="https://wctmanutencao-lab.github.io/planta-linha-producao.html" target="_blank" class="planta-btn">
+        🗺️ Ver planta
+      </a>
+    </div>
+  </div>
+</section>
+
 
 <section class="section melhorias" id="melhorias">
   <div class="melhorias-header">
