@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wanderson Carvalho Teixeira — Especialista em Manutenção Industrial</title>
+<title>Wanderson Carvalho — Soluções em Manutenção Industrial</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4EBPMSJ68V"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4EBPMSJ68V');</script>
 <style>
@@ -20,285 +19,218 @@
   --muted: #5a6b5e;
   --border: #e2ddd4;
   --white: #ffffff;
-  --accent: #d4521a;
 }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(249,246,240,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:var(--steel);}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:1.8rem;align-items:center;}
+.nav-links a{font-size:0.82rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--steel);}
+.nav-cta{background:var(--steel);color:var(--white)!important;padding:0.45rem 1.2rem;border-radius:6px;font-weight:600!important;}
+.nav-cta:hover{background:var(--gold)!important;color:var(--steel)!important;}
 
-/* ── NAV ── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 1.1rem 4rem;
-  background: rgba(249,246,240,0.96);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-}
-.nav-logo { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1rem; color: var(--steel); letter-spacing: -0.3px; }
-.nav-logo span { color: var(--gold); }
-.nav-links { display: flex; gap: 2rem; align-items: center; }
-.nav-links a { font-size: 0.82rem; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-.nav-links a:hover { color: var(--steel); }
-.nav-cta { background: var(--steel); color: var(--white) !important; padding: 0.45rem 1.2rem; border-radius: 6px; font-weight: 600 !important; transition: background 0.2s !important; }
-.nav-cta:hover { background: var(--gold) !important; color: var(--steel) !important; }
+/* HERO */
+.hero{min-height:100vh;padding-top:70px;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(200,151,58,0.07) 0%,transparent 50%),radial-gradient(ellipse at 10% 80%,rgba(28,43,32,0.04) 0%,transparent 50%);}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:5rem 3rem 5rem 4rem;position:relative;z-index:1;}
+.eyebrow{display:flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin-bottom:1.5rem;}
+.eyebrow::before{content:'';width:24px;height:1.5px;background:var(--gold);}
+.hero-h1{font-family:'Fraunces',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:900;line-height:1.08;color:var(--steel);letter-spacing:-1px;}
+.hero-h1 em{font-style:italic;color:var(--gold);}
+.hero-sub{margin-top:1.4rem;font-size:1rem;line-height:1.8;color:var(--muted);max-width:440px;}
+.hero-tagline{margin-top:1.2rem;font-size:0.88rem;font-weight:600;color:var(--steel);font-style:italic;opacity:0.7;}
+.hero-stats{display:flex;gap:2rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--border);}
+.hstat-num{font-family:'Fraunces',serif;font-size:2rem;font-weight:900;color:var(--steel);line-height:1;}
+.hstat-label{font-size:0.7rem;color:var(--muted);font-weight:500;margin-top:0.2rem;}
+.hero-ctas{display:flex;gap:1rem;margin-top:2.5rem;flex-wrap:wrap;}
+.btn-gold{background:var(--gold);color:var(--steel);padding:0.85rem 2rem;border-radius:8px;font-weight:700;font-size:0.9rem;text-decoration:none;transition:all 0.2s;border:2px solid var(--gold);}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,151,58,0.25);}
+.btn-ghost{background:transparent;color:var(--steel);padding:0.85rem 2rem;border-radius:8px;font-weight:600;font-size:0.9rem;text-decoration:none;transition:all 0.2s;border:2px solid var(--border);}
+.btn-ghost:hover{border-color:var(--steel);background:var(--steel);color:white;transform:translateY(-2px);}
 
-/* ── HERO ── */
-.hero {
-  min-height: 100vh; padding-top: 70px;
-  display: grid; grid-template-columns: 1fr 1fr;
-  position: relative; overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse at 80% 20%, rgba(200,151,58,0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 10% 80%, rgba(28,43,32,0.04) 0%, transparent 50%);
-}
-.hero-left {
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 5rem 3rem 5rem 4rem; position: relative; z-index: 1;
-}
-.hero-eyebrow {
-  display: flex; align-items: center; gap: 0.6rem;
-  font-size: 0.72rem; font-weight: 600; color: var(--gold);
-  text-transform: uppercase; letter-spacing: 2px;
-  margin-bottom: 1.5rem;
-}
-.hero-eyebrow::before { content: ''; width: 28px; height: 1.5px; background: var(--gold); }
-.hero-h1 {
-  font-family: 'Fraunces', serif;
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-  font-weight: 900; line-height: 1.08;
-  color: var(--steel); letter-spacing: -1px;
-}
-.hero-h1 em { font-style: italic; color: var(--gold); }
-.hero-sub {
-  margin-top: 1.5rem; font-size: 1.02rem; line-height: 1.75;
-  color: var(--muted); max-width: 440px; font-weight: 400;
-}
-.hero-stats {
-  display: flex; gap: 2rem; margin-top: 2.5rem;
-  padding-top: 2rem; border-top: 1px solid var(--border);
-}
-.hstat-num { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 900; color: var(--steel); line-height: 1; }
-.hstat-label { font-size: 0.72rem; color: var(--muted); font-weight: 500; margin-top: 0.2rem; }
-.hero-ctas { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; }
-.btn-gold { background: var(--gold); color: var(--steel); padding: 0.85rem 2rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: all 0.2s; border: 2px solid var(--gold); }
-.btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,151,58,0.25); }
-.btn-ghost { background: transparent; color: var(--steel); padding: 0.85rem 2rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: all 0.2s; border: 2px solid var(--border); }
-.btn-ghost:hover { border-color: var(--steel); background: var(--steel); color: white; transform: translateY(-2px); }
+.hero-right{background:var(--steel);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:3rem;}
+.hero-right::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 20%,rgba(200,151,58,0.15),transparent 50%),repeating-linear-gradient(45deg,rgba(255,255,255,0.01) 0px,rgba(255,255,255,0.01) 1px,transparent 1px,transparent 20px);}
+.hero-cards{width:100%;max-width:380px;position:relative;z-index:1;}
+.hcard{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.3rem 1.6rem;margin-bottom:0.8rem;}
+.hcard-icon{font-size:1.2rem;margin-bottom:0.5rem;}
+.hcard-title{font-size:0.82rem;font-weight:700;color:white;margin-bottom:0.2rem;}
+.hcard-desc{font-size:0.73rem;color:rgba(255,255,255,0.45);line-height:1.5;}
+.hcard-gold{border-color:rgba(200,151,58,0.4);background:rgba(200,151,58,0.08);}
+.hcard-gold .hcard-title{color:var(--gold-light);}
 
-.hero-right {
-  background: var(--steel);
-  display: flex; align-items: center; justify-content: center;
-  position: relative; overflow: hidden; padding: 3rem;
-}
-.hero-right::before {
-  content: '';
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse at 70% 20%, rgba(200,151,58,0.15), transparent 50%),
-    repeating-linear-gradient(45deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 1px, transparent 1px, transparent 20px);
-}
-.hero-card-stack { width: 100%; max-width: 380px; position: relative; z-index: 1; }
-.hcard {
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 14px; padding: 1.4rem 1.6rem; margin-bottom: 0.8rem;
-}
-.hcard-icon { font-size: 1.3rem; margin-bottom: 0.6rem; }
-.hcard-title { font-size: 0.82rem; font-weight: 700; color: white; margin-bottom: 0.3rem; }
-.hcard-desc { font-size: 0.75rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
-.hcard-gold { border-color: rgba(200,151,58,0.4); background: rgba(200,151,58,0.08); }
-.hcard-gold .hcard-title { color: var(--gold-light); }
+/* SECTIONS */
+.section{padding:6rem 4rem;}
+.section-eyebrow{display:flex;align-items:center;gap:0.6rem;font-size:0.68rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem;}
+.section-eyebrow::before{content:'';width:20px;height:1.5px;background:var(--gold);}
+.section-title{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;line-height:1.15;color:var(--steel);letter-spacing:-0.5px;}
+.section-title em{font-style:italic;color:var(--gold);}
+.section-sub{font-size:0.95rem;line-height:1.75;color:var(--muted);max-width:580px;margin-top:0.8rem;}
 
-/* ── SECTIONS BASE ── */
-.section { padding: 6rem 4rem; }
-.section-eyebrow {
-  display: flex; align-items: center; gap: 0.6rem;
-  font-size: 0.68rem; font-weight: 700; color: var(--gold);
-  text-transform: uppercase; letter-spacing: 2px;
-  margin-bottom: 1rem;
-}
-.section-eyebrow::before { content: ''; width: 20px; height: 1.5px; background: var(--gold); }
-.section-title {
-  font-family: 'Fraunces', serif;
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 900; line-height: 1.15;
-  color: var(--steel); letter-spacing: -0.5px;
-}
-.section-title em { font-style: italic; color: var(--gold); }
-.section-sub { font-size: 0.95rem; line-height: 1.75; color: var(--muted); max-width: 560px; margin-top: 0.8rem; }
+/* POSICIONAMENTO */
+.posicionamento{background:var(--white);}
+.pos-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:3rem;}
+.pos-quote{font-family:'Fraunces',serif;font-size:1.25rem;font-style:italic;line-height:1.65;color:var(--steel);border-left:3px solid var(--gold);padding-left:1.5rem;margin-bottom:1.5rem;}
+.pos-text{font-size:0.93rem;line-height:1.8;color:var(--muted);}
+.pos-text+.pos-text{margin-top:1rem;}
+.diferenciais{display:grid;gap:1rem;}
+.dif-item{display:flex;gap:1rem;align-items:flex-start;padding:1.2rem;background:var(--cream);border-radius:10px;border:1px solid var(--border);transition:all 0.2s;}
+.dif-item:hover{border-color:rgba(200,151,58,0.4);background:var(--gold-pale);}
+.dif-icon{font-size:1.2rem;flex-shrink:0;}
+.dif-title{font-weight:700;font-size:0.88rem;color:var(--steel);}
+.dif-desc{font-size:0.78rem;color:var(--muted);margin-top:0.2rem;line-height:1.5;}
 
-/* ── POSICIONAMENTO ── */
-.posicionamento { background: var(--white); }
-.pos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-top: 3rem; }
-.pos-quote {
-  font-family: 'Fraunces', serif;
-  font-size: 1.3rem; font-style: italic;
-  line-height: 1.6; color: var(--steel);
-  border-left: 3px solid var(--gold);
-  padding-left: 1.5rem; margin-bottom: 1.5rem;
-}
-.pos-text { font-size: 0.93rem; line-height: 1.8; color: var(--muted); }
-.pos-text + .pos-text { margin-top: 1rem; }
-.diferenciais { display: grid; gap: 1rem; }
-.dif-item {
-  display: flex; gap: 1rem; align-items: flex-start;
-  padding: 1.2rem; background: var(--cream);
-  border-radius: 10px; border: 1px solid var(--border);
-}
-.dif-icon { font-size: 1.3rem; flex-shrink: 0; }
-.dif-title { font-weight: 700; font-size: 0.88rem; color: var(--steel); }
-.dif-desc { font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; line-height: 1.5; }
+/* QUEM SE BENEFICIA */
+.beneficia{background:var(--steel);position:relative;overflow:hidden;}
+.beneficia::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 90% 50%,rgba(200,151,58,0.1),transparent 55%),repeating-linear-gradient(45deg,rgba(255,255,255,0.01) 0px,rgba(255,255,255,0.01) 1px,transparent 1px,transparent 24px);}
+.beneficia .section-eyebrow{color:var(--gold-light);}
+.beneficia .section-eyebrow::before{background:var(--gold-light);}
+.beneficia .section-title{color:white;}
+.beneficia .section-sub{color:rgba(255,255,255,0.45);}
+.ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem;position:relative;z-index:1;}
+.ben-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.8rem;transition:all 0.25s;}
+.ben-card:hover{background:rgba(200,151,58,0.1);border-color:rgba(200,151,58,0.3);transform:translateY(-3px);}
+.ben-icon{font-size:1.8rem;margin-bottom:1rem;}
+.ben-title{font-weight:700;font-size:0.92rem;color:white;margin-bottom:0.5rem;}
+.ben-desc{font-size:0.78rem;line-height:1.6;color:rgba(255,255,255,0.45);}
+.ben-cta{text-align:center;margin-top:3rem;position:relative;z-index:1;}
+.ben-cta p{color:rgba(255,255,255,0.5);font-size:0.9rem;margin-bottom:1.2rem;font-style:italic;}
 
-/* ── SERVIÇOS ── */
-.servicos { background: var(--cream); }
-.serv-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 3rem; }
-.serv-card {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 14px; padding: 2rem; transition: all 0.25s;
-  position: relative; overflow: hidden;
-}
-.serv-card::after {
-  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
-  height: 3px; background: var(--gold);
-  transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
-}
-.serv-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(28,43,32,0.1); border-color: var(--gold); }
-.serv-card:hover::after { transform: scaleX(1); }
-.serv-num { font-family: 'Fraunces', serif; font-size: 2.5rem; font-weight: 900; color: var(--border); line-height: 1; margin-bottom: 1rem; }
-.serv-title { font-weight: 700; font-size: 0.95rem; color: var(--steel); margin-bottom: 0.6rem; }
-.serv-desc { font-size: 0.8rem; line-height: 1.65; color: var(--muted); }
-.serv-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
-.serv-tag { font-size: 0.65rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 4px; background: var(--gold-pale); color: var(--gold); border: 1px solid rgba(200,151,58,0.3); }
+/* SERVIÇOS */
+.servicos{background:var(--cream);}
+.serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.serv-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:2rem;transition:all 0.25s;position:relative;overflow:hidden;}
+.serv-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
+.serv-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(28,43,32,0.1);border-color:rgba(200,151,58,0.4);}
+.serv-card:hover::after{transform:scaleX(1);}
+.serv-num{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:900;color:var(--border);line-height:1;margin-bottom:1rem;}
+.serv-title{font-weight:700;font-size:0.95rem;color:var(--steel);margin-bottom:0.6rem;}
+.serv-desc{font-size:0.8rem;line-height:1.65;color:var(--muted);}
+.serv-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem;}
+.serv-tag{font-size:0.65rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:4px;background:var(--gold-pale);color:var(--gold);border:1px solid rgba(200,151,58,0.3);}
 
-/* ── CASES ── */
-.cases { background: var(--steel); }
-.cases .section-eyebrow { color: var(--gold-light); }
-.cases .section-eyebrow::before { background: var(--gold-light); }
-.cases .section-title { color: white; }
-.cases .section-sub { color: rgba(255,255,255,0.45); }
-.cases-filtros { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 2rem 0; }
-.case-filtro { padding: 0.35rem 1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.15); background: transparent; color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 600; cursor: pointer; transition: all 0.18s; font-family: inherit; }
-.case-filtro:hover { border-color: var(--gold); color: var(--gold-light); }
-.case-filtro.ativo { background: var(--gold); color: var(--steel); border-color: var(--gold); font-weight: 700; }
-.cases-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.2rem; }
-.case-card {
-  border-radius: 14px; padding: 1.8rem;
-  display: flex; flex-direction: column;
-  transition: all 0.25s; cursor: pointer;
-  position: relative; overflow: hidden;
-}
-.case-Qualidade { background: linear-gradient(140deg, #0a3d2e, #0d4a38); border: 1px solid rgba(52,211,153,0.25); }
-.case-Processo { background: linear-gradient(140deg, #3d1a0a, #4a2010); border: 1px solid rgba(251,146,60,0.25); }
-.case-Produtividade { background: linear-gradient(140deg, #0a1f3d, #0d2850); border: 1px solid rgba(96,165,250,0.25); }
-.case-Seguranca { background: linear-gradient(140deg, #3d0a0a, #4a1010); border: 1px solid rgba(252,165,165,0.25); }
-.case-card:hover { transform: translateY(-5px); box-shadow: 0 20px 48px rgba(0,0,0,0.4); }
-.case-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-.case-cat { font-size: 0.65rem; font-weight: 700; padding: 0.2rem 0.7rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
-.cat-Qualidade { background: rgba(52,211,153,0.2); color: #6ee7b7; border: 1px solid rgba(52,211,153,0.3); }
-.cat-Processo { background: rgba(251,146,60,0.2); color: #fdba74; border: 1px solid rgba(251,146,60,0.3); }
-.cat-Produtividade { background: rgba(96,165,250,0.2); color: #93c5fd; border: 1px solid rgba(96,165,250,0.3); }
-.cat-Seguranca { background: rgba(252,165,165,0.2); color: #fca5a5; border: 1px solid rgba(252,165,165,0.3); }
-.case-data { font-size: 0.68rem; color: rgba(255,255,255,0.35); }
-.case-titulo { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 700; color: white; margin-bottom: 0.6rem; line-height: 1.3; }
-.case-desc { font-size: 0.8rem; line-height: 1.65; color: rgba(255,255,255,0.55); flex: 1; margin-bottom: 1.2rem; }
-.case-link { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.18); border-radius: 6px; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 700; text-decoration: none; transition: all 0.2s; align-self: flex-start; }
-.case-link:hover { background: var(--gold); color: var(--steel); border-color: var(--gold); }
-.cases-vazio { text-align: center; padding: 3rem; color: rgba(255,255,255,0.3); grid-column: 1/-1; }
+/* CASES */
+.cases{background:var(--white);}
+.cases-filtros{display:flex;gap:0.5rem;flex-wrap:wrap;margin:2rem 0;}
+.case-filtro{padding:0.35rem 1rem;border-radius:6px;border:1.5px solid var(--border);background:transparent;color:var(--muted);font-size:0.75rem;font-weight:600;cursor:pointer;transition:all 0.18s;font-family:inherit;}
+.case-filtro:hover{border-color:var(--gold);color:var(--gold);}
+.case-filtro.ativo{background:var(--steel);color:white;border-color:var(--steel);}
+.cases-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;}
+.case-card{border-radius:14px;padding:1.8rem;display:flex;flex-direction:column;transition:all 0.25s;position:relative;overflow:hidden;}
+.case-Qualidade{background:linear-gradient(140deg,#0a3d2e,#0d4a38);border:1px solid rgba(52,211,153,0.25);}
+.case-Processo{background:linear-gradient(140deg,#3d1a0a,#4a2010);border:1px solid rgba(251,146,60,0.25);}
+.case-Produtividade{background:linear-gradient(140deg,#0a1f3d,#0d2850);border:1px solid rgba(96,165,250,0.25);}
+.case-Seguranca{background:linear-gradient(140deg,#3d0a0a,#4a1010);border:1px solid rgba(252,165,165,0.25);}
+.case-card:hover{transform:translateY(-5px);box-shadow:0 20px 48px rgba(0,0,0,0.2);}
+.case-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;}
+.case-cat{font-size:0.65rem;font-weight:700;padding:0.2rem 0.7rem;border-radius:4px;text-transform:uppercase;letter-spacing:0.5px;}
+.cat-Qualidade{background:rgba(52,211,153,0.2);color:#6ee7b7;border:1px solid rgba(52,211,153,0.3);}
+.cat-Processo{background:rgba(251,146,60,0.2);color:#fdba74;border:1px solid rgba(251,146,60,0.3);}
+.cat-Produtividade{background:rgba(96,165,250,0.2);color:#93c5fd;border:1px solid rgba(96,165,250,0.3);}
+.cat-Seguranca{background:rgba(252,165,165,0.2);color:#fca5a5;border:1px solid rgba(252,165,165,0.3);}
+.case-data{font-size:0.68rem;color:rgba(255,255,255,0.35);}
+.case-titulo{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700;color:white;margin-bottom:0.6rem;line-height:1.3;}
+.case-desc{font-size:0.8rem;line-height:1.65;color:rgba(255,255,255,0.55);flex:1;margin-bottom:0.8rem;}
+.case-resultado{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:0.7rem 1rem;margin-bottom:1rem;font-size:0.75rem;color:rgba(255,255,255,0.7);display:flex;align-items:center;gap:0.5rem;}
+.case-resultado strong{color:#4ade80;font-weight:700;}
+.case-link{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.18);border-radius:6px;padding:0.5rem 1rem;font-size:0.75rem;font-weight:700;text-decoration:none;transition:all 0.2s;align-self:flex-start;}
+.case-link:hover{background:var(--gold);color:var(--steel);border-color:var(--gold);}
+.cases-vazio{text-align:center;padding:3rem;color:var(--muted);grid-column:1/-1;}
 
-/* ── METODOLOGIA ── */
-.metodologia { background: var(--white); }
-.met-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; margin-top: 3rem; }
-.met-step {
-  padding: 2rem 1.5rem; position: relative;
-  border-right: 1px solid var(--border);
-}
-.met-step:last-child { border-right: none; }
-.met-num { font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 900; color: var(--border); line-height: 1; margin-bottom: 0.8rem; }
-.met-icon { font-size: 1.4rem; margin-bottom: 0.8rem; }
-.met-title { font-weight: 700; font-size: 0.9rem; color: var(--steel); margin-bottom: 0.5rem; }
-.met-desc { font-size: 0.78rem; line-height: 1.65; color: var(--muted); }
-.met-arrow { position: absolute; top: 2.5rem; right: -0.7rem; width: 1.4rem; height: 1.4rem; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: var(--steel); font-weight: 900; z-index: 1; }
-.met-step:last-child .met-arrow { display: none; }
+/* COMO TRABALHO */
+.como-trabalho{background:var(--steel);position:relative;overflow:hidden;}
+.como-trabalho::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 10% 50%,rgba(200,151,58,0.1),transparent 55%);}
+.como-trabalho .section-eyebrow{color:var(--gold-light);}
+.como-trabalho .section-eyebrow::before{background:var(--gold-light);}
+.como-trabalho .section-title{color:white;}
+.como-trabalho .section-sub{color:rgba(255,255,255,0.45);}
+.etapas{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:3.5rem;position:relative;z-index:1;}
+.etapas::before{content:'';position:absolute;top:32px;left:calc(100%/6);right:calc(100%/6);height:1px;background:linear-gradient(90deg,transparent,rgba(200,151,58,0.4),rgba(200,151,58,0.4),transparent);z-index:0;}
+.etapa{padding:0 1.5rem 0;text-align:center;position:relative;}
+.etapa-num{width:64px;height:64px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:1.3rem;font-weight:900;color:var(--steel);margin:0 auto 1.2rem;position:relative;z-index:1;}
+.etapa-icon{font-size:1.1rem;margin-bottom:0.6rem;}
+.etapa-title{font-weight:700;font-size:0.9rem;color:white;margin-bottom:0.5rem;}
+.etapa-desc{font-size:0.77rem;line-height:1.6;color:rgba(255,255,255,0.45);}
+.etapas-row2{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:2rem;position:relative;z-index:1;}
 
-/* ── SISTEMA ── */
-.sistema { background: var(--cream); }
-.sis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
-.sis-desc { font-size: 0.93rem; line-height: 1.8; color: var(--muted); margin-bottom: 1.5rem; }
-.sis-features { display: grid; gap: 0.8rem; }
-.sis-feat { display: flex; gap: 0.8rem; align-items: center; font-size: 0.85rem; color: var(--text); font-weight: 500; }
-.sis-feat::before { content: '✓'; width: 22px; height: 22px; background: var(--gold-pale); border: 1px solid rgba(200,151,58,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 900; color: var(--gold); flex-shrink: 0; }
-.sis-visual { background: var(--steel); border-radius: 16px; padding: 2rem; }
-.sis-visual-title { font-size: 0.72rem; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.2rem; }
-.kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
-.kpi-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 1rem; }
-.kpi-val { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 900; color: var(--gold-light); line-height: 1; }
-.kpi-label { font-size: 0.68rem; color: rgba(255,255,255,0.4); margin-top: 0.2rem; }
-.sis-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.8rem; padding: 0.8rem 1.8rem; background: var(--steel); color: white; border-radius: 8px; font-weight: 700; font-size: 0.88rem; text-decoration: none; transition: all 0.2s; }
-.sis-link:hover { background: var(--gold); color: var(--steel); transform: translateY(-1px); }
+/* SISTEMA */
+.sistema{background:var(--cream);}
+.sis-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:3rem;}
+.sis-badge{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(200,151,58,0.1);border:1px solid rgba(200,151,58,0.3);color:var(--gold);border-radius:4px;font-size:0.68rem;font-weight:700;padding:0.25rem 0.7rem;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:1rem;}
+.sis-desc{font-size:0.93rem;line-height:1.8;color:var(--muted);margin-bottom:1rem;}
+.sis-features{display:grid;gap:0.7rem;}
+.sis-feat{display:flex;gap:0.8rem;align-items:center;font-size:0.85rem;color:var(--text);font-weight:500;}
+.sis-feat::before{content:'✓';width:22px;height:22px;background:var(--gold-pale);border:1px solid rgba(200,151,58,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:900;color:var(--gold);flex-shrink:0;}
+.sis-aviso{margin-top:1.5rem;padding:1rem 1.2rem;background:var(--gold-pale);border:1px solid rgba(200,151,58,0.3);border-radius:8px;font-size:0.8rem;color:var(--muted);font-style:italic;}
+.sis-link{display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.5rem;padding:0.75rem 1.6rem;background:var(--steel);color:white;border-radius:8px;font-weight:700;font-size:0.85rem;text-decoration:none;transition:all 0.2s;}
+.sis-link:hover{background:var(--gold);color:var(--steel);transform:translateY(-1px);}
+.sis-visual{background:var(--steel);border-radius:16px;padding:2rem;}
+.sis-visual-title{font-size:0.7rem;font-weight:700;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:1px;margin-bottom:1.2rem;}
+.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;}
+.kpi-item{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:1rem;}
+.kpi-val{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:900;color:var(--gold-light);line-height:1;}
+.kpi-label{font-size:0.66rem;color:rgba(255,255,255,0.4);margin-top:0.2rem;}
 
-/* ── FORMAÇÃO ── */
-.formacao { background: var(--white); }
-.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
-.form-col-title { font-weight: 700; font-size: 0.8rem; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.2rem; }
-.form-item { padding: 1.2rem; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 0.8rem; background: var(--cream); }
-.form-titulo { font-weight: 700; font-size: 0.88rem; color: var(--steel); }
-.form-inst { font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
-.form-status { display: inline-block; font-size: 0.62rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px; margin-top: 0.4rem; }
-.status-concluido { background: #dcfce7; color: #15803d; }
-.status-andamento { background: #fef9c3; color: #854d0e; }
+/* FORMAÇÃO */
+.formacao{background:var(--white);}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem;}
+.form-col-title{font-weight:700;font-size:0.78rem;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:1.2rem;}
+.form-item{padding:1.2rem;border-radius:10px;border:1px solid var(--border);margin-bottom:0.8rem;background:var(--cream);transition:all 0.2s;}
+.form-item:hover{border-color:rgba(200,151,58,0.4);}
+.form-titulo{font-weight:700;font-size:0.88rem;color:var(--steel);}
+.form-inst{font-size:0.78rem;color:var(--muted);margin-top:0.2rem;}
+.form-status{display:inline-block;font-size:0.62rem;font-weight:700;padding:0.15rem 0.5rem;border-radius:4px;margin-top:0.4rem;}
+.status-concluido{background:#dcfce7;color:#15803d;}
+.status-andamento{background:#fef9c3;color:#854d0e;}
 
-/* ── CONTATO ── */
-.contato { background: var(--steel); position: relative; overflow: hidden; }
-.contato::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 80% 50%, rgba(200,151,58,0.12), transparent 60%),
-              repeating-linear-gradient(45deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 1px, transparent 1px, transparent 24px);
-}
-.contato-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; text-align: center; }
-.contato .section-eyebrow { justify-content: center; color: var(--gold-light); }
-.contato .section-eyebrow::before { background: var(--gold-light); }
-.contato .section-title { color: white; }
-.contato-desc { color: rgba(255,255,255,0.5); font-size: 1rem; line-height: 1.75; margin-top: 1rem; }
-.contato-links { display: flex; gap: 1rem; justify-content: center; margin-top: 2.5rem; flex-wrap: wrap; }
-.clink { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.9rem 2.2rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: all 0.2s; }
-.clink-gold { background: var(--gold); color: var(--steel); }
-.clink-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,151,58,0.3); }
-.clink-ghost { background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.2); }
-.clink-ghost:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
+/* CONTATO */
+.contato{background:var(--steel);position:relative;overflow:hidden;}
+.contato::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(200,151,58,0.12),transparent 60%),repeating-linear-gradient(45deg,rgba(255,255,255,0.01) 0px,rgba(255,255,255,0.01) 1px,transparent 1px,transparent 24px);}
+.contato-inner{position:relative;z-index:1;max-width:680px;margin:0 auto;text-align:center;}
+.contato .section-eyebrow{justify-content:center;color:var(--gold-light);}
+.contato .section-eyebrow::before{background:var(--gold-light);}
+.contato .section-title{color:white;}
+.contato-taglines{margin:1.5rem 0;display:flex;flex-direction:column;gap:0.4rem;}
+.contato-taglines span{font-family:'Fraunces',serif;font-style:italic;font-size:1rem;color:rgba(255,255,255,0.4);}
+.contato-taglines span.destaque{color:var(--gold-light);font-size:1.15rem;}
+.contato-desc{color:rgba(255,255,255,0.5);font-size:0.95rem;line-height:1.75;margin-top:1rem;}
+.contato-links{display:flex;gap:1rem;justify-content:center;margin-top:2.5rem;flex-wrap:wrap;}
+.clink{display:inline-flex;align-items:center;gap:0.6rem;padding:0.9rem 2.2rem;border-radius:8px;font-weight:700;font-size:0.9rem;text-decoration:none;transition:all 0.2s;}
+.clink-gold{background:var(--gold);color:var(--steel);}
+.clink-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,151,58,0.3);}
+.clink-ghost{background:rgba(255,255,255,0.08);color:white;border:1px solid rgba(255,255,255,0.2);}
+.clink-ghost:hover{background:rgba(255,255,255,0.15);transform:translateY(-2px);}
 
-footer { background: #0c1510; text-align: center; padding: 1.5rem; font-size: 0.72rem; color: rgba(255,255,255,0.2); }
+footer{background:#0c1510;text-align:center;padding:1.5rem;font-size:0.72rem;color:rgba(255,255,255,0.2);}
 
-@keyframes fadeIn { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 
-@media (max-width: 1024px) { .serv-grid { grid-template-columns: 1fr 1fr; } .met-grid { grid-template-columns: 1fr 1fr; } .met-step:nth-child(2) { border-right: none; } .met-step:nth-child(3) { border-top: 1px solid var(--border); } }
-@media (max-width: 900px) {
-  nav { padding: 1rem 1.5rem; } .nav-links { display: none; }
-  .hero { grid-template-columns: 1fr; } .hero-left { padding: 3rem 1.5rem 2.5rem; } .hero-right { min-height: 340px; padding: 2rem; }
-  .section { padding: 4rem 1.5rem; }
-  .pos-grid, .sis-grid, .form-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .serv-grid { grid-template-columns: 1fr; }
-  .met-grid { grid-template-columns: 1fr; } .met-step { border-right: none; border-bottom: 1px solid var(--border); } .met-arrow { display: none; }
-  .hero-stats { gap: 1.5rem; }
+@media(max-width:1024px){.serv-grid{grid-template-columns:1fr 1fr;}.etapas,.etapas-row2{grid-template-columns:1fr 1fr;}.ben-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem;}.nav-links{display:none;}
+  .hero{grid-template-columns:1fr;}.hero-left{padding:3rem 1.5rem 2.5rem;}.hero-right{min-height:320px;padding:2rem;}
+  .section{padding:4rem 1.5rem;}
+  .pos-grid,.sis-grid,.form-grid{grid-template-columns:1fr;gap:2.5rem;}
+  .serv-grid,.ben-grid,.etapas,.etapas-row2{grid-template-columns:1fr;}
+  .hero-stats{gap:1.5rem;}
+  .etapas::before{display:none;}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <div class="nav-logo">Wanderson <span>Teixeira</span></div>
+  <div class="nav-logo">Wanderson <span>Carvalho</span></div>
   <div class="nav-links">
     <a href="#posicionamento">Sobre</a>
-    <a href="#servicos">Serviços</a>
+    <a href="#beneficia">Para quem</a>
+    <a href="#servicos">Soluções</a>
     <a href="#cases">Cases</a>
-    <a href="#metodologia">Metodologia</a>
-    <a href="#formacao">Formação</a>
+    <a href="#como-trabalho">Como trabalho</a>
     <a href="#contato" class="nav-cta">Fale Comigo</a>
   </div>
 </nav>
@@ -306,40 +238,41 @@ footer { background: #0c1510; text-align: center; padding: 1.5rem; font-size: 0.
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <div class="hero-eyebrow">Especialista em Manutenção Industrial</div>
-    <h1 class="hero-h1">Sua operação<br>merece parar<br><em>menos.</em></h1>
-    <p class="hero-sub">Organizo a manutenção industrial da sua empresa, reduzo falhas não planejadas e implemento confiabilidade operacional com metodologia e resultados comprovados.</p>
+    <div class="eyebrow">Soluções em Manutenção Industrial</div>
+    <h1 class="hero-h1">Menos falhas.<br>Mais <em>confiabilidade.</em></h1>
+    <p class="hero-sub">Organizo a manutenção da sua indústria, elimino falhas recorrentes e implanto confiabilidade operacional com metodologia comprovada e resultados mensuráveis.</p>
+    <p class="hero-tagline">"Transformando problemas recorrentes em melhorias permanentes."</p>
     <div class="hero-stats">
       <div><div class="hstat-num">15+</div><div class="hstat-label">Anos de experiência</div></div>
       <div><div class="hstat-num">5+</div><div class="hstat-label">Cases documentados</div></div>
       <div><div class="hstat-num">PCM</div><div class="hstat-label">Gestão & Indicadores</div></div>
     </div>
     <div class="hero-ctas">
-      <a href="#contato" class="btn-gold">Quero Reduzir Falhas</a>
-      <a href="#cases" class="btn-ghost">Ver Cases Reais</a>
+      <a href="#contato" class="btn-gold">Quero Reduzir Falhas →</a>
+      <a href="#cases" class="btn-ghost">Ver Resultados Reais</a>
     </div>
   </div>
   <div class="hero-right">
-    <div class="hero-card-stack">
+    <div class="hero-cards">
       <div class="hcard hcard-gold">
         <div class="hcard-icon">📉</div>
-        <div class="hcard-title">Redução de Falhas Não Planejadas</div>
-        <div class="hcard-desc">Diagnóstico e estruturação de planos preventivos e preditivos que eliminam paradas inesperadas.</div>
+        <div class="hcard-title">Redução de Paradas Não Planejadas</div>
+        <div class="hcard-desc">Diagnóstico e planos preventivos que eliminam as falhas antes que elas parem sua produção.</div>
       </div>
       <div class="hcard">
         <div class="hcard-icon">⚙️</div>
-        <div class="hcard-title">Organização da Manutenção</div>
-        <div class="hcard-desc">Implantação de PCM, indicadores de desempenho (MTBF, MTTR, OEE) e gestão de ativos.</div>
+        <div class="hcard-title">Organização da Manutenção (PCM)</div>
+        <div class="hcard-desc">Indicadores reais: MTBF, MTTR, OEE e disponibilidade sob controle.</div>
       </div>
       <div class="hcard">
         <div class="hcard-icon">🔍</div>
-        <div class="hcard-title">Análise de Causa Raiz</div>
-        <div class="hcard-desc">Identificação das causas reais dos problemas crônicos para solução definitiva.</div>
+        <div class="hcard-title">Eliminação de Causas Raiz</div>
+        <div class="hcard-desc">Análise técnica para resolver o problema de verdade — não apenas tratar o sintoma.</div>
       </div>
       <div class="hcard">
-        <div class="hcard-icon">📊</div>
-        <div class="hcard-title">Gestão com Indicadores Reais</div>
-        <div class="hcard-desc">Sistema de acompanhamento que transforma dados de manutenção em decisões estratégicas.</div>
+        <div class="hcard-icon">📈</div>
+        <div class="hcard-title">Aumento de Disponibilidade</div>
+        <div class="hcard-desc">Mais horas de máquina rodando, menos custo de manutenção corretiva emergencial.</div>
       </div>
     </div>
   </div>
@@ -350,87 +283,116 @@ footer { background: #0c1510; text-align: center; padding: 1.5rem; font-size: 0.
   <div class="section-eyebrow">Quem sou eu</div>
   <div class="pos-grid">
     <div>
-      <h2 class="section-title">15 anos no<br>chão de <em>fábrica</em></h2>
-      <div class="pos-quote">
-        "Não vendo software. Vendo resultado operacional."
-      </div>
-      <p class="pos-text">Iniciei como mecânico industrial e evoluí ao longo de 15 anos para a gestão completa de manutenção. Atualmente atuo sozinho no setor de manutenção de uma indústria, coordenando toda a estratégia de confiabilidade operacional.</p>
-      <p class="pos-text">Desenvolvi um sistema próprio de gestão da manutenção como ferramenta de apoio ao meu trabalho — não porque sou desenvolvedor, mas porque precisava de uma solução eficiente para entregar resultados mensuráveis.</p>
+      <h2 class="section-title">15 anos<br>resolvendo <em>problemas</em><br>industriais reais</h2>
+      <div class="pos-quote">"Não vendo software. Vendo resultado operacional. Minha entrega é sua máquina funcionando."</div>
+      <p class="pos-text">Iniciei minha carreira como mecânico industrial e evoluí ao longo de 15 anos para a gestão completa da manutenção. Atualmente sou o único responsável pelo setor de manutenção de uma indústria — coordenando desde a execução técnica até os indicadores estratégicos de confiabilidade.</p>
+      <p class="pos-text">Sou Técnico em Mecânica Industrial, Técnico em Automação Industrial e estou cursando Tecnólogo em Gestão da Produção Industrial. Esse conjunto de formações me permite enxergar o problema tanto do chão de fábrica quanto da gestão.</p>
     </div>
     <div class="diferenciais">
       <div class="dif-item">
         <div class="dif-icon">🏭</div>
-        <div>
-          <div class="dif-title">Experiência Real de Chão de Fábrica</div>
-          <div class="dif-desc">Cada solução que proponho já foi testada na prática. Não trabalho com teoria — trabalho com resultado.</div>
-        </div>
+        <div><div class="dif-title">Experiência Real de Chão de Fábrica</div><div class="dif-desc">Cada solução que proponho foi testada na prática. Não trabalho com teoria — trabalho com resultado mensurável.</div></div>
       </div>
       <div class="dif-item">
         <div class="dif-icon">📐</div>
-        <div>
-          <div class="dif-title">Visão Técnica + Visão de Gestão</div>
-          <div class="dif-desc">Combino o conhecimento técnico de mecânica e automação com a gestão estratégica da manutenção via PCM.</div>
-        </div>
+        <div><div class="dif-title">Visão Técnica + Visão de Gestão</div><div class="dif-desc">Combino o conhecimento técnico de mecânica e automação com a gestão estratégica da manutenção via PCM e indicadores.</div></div>
       </div>
       <div class="dif-item">
-        <div class="dif-icon">📈</div>
-        <div>
-          <div class="dif-title">Resultados Documentados</div>
-          <div class="dif-desc">Cases reais com problema identificado, solução aplicada e resultado comprovado — disponíveis para consulta.</div>
-        </div>
+        <div class="dif-icon">📋</div>
+        <div><div class="dif-title">Casos Documentados com Resultados</div><div class="dif-desc">Cada intervenção gera um relatório completo: problema, causa raiz, solução aplicada e resultado comprovado.</div></div>
       </div>
       <div class="dif-item">
         <div class="dif-icon">🎯</div>
-        <div>
-          <div class="dif-title">Foco em Confiabilidade</div>
-          <div class="dif-desc">Meu objetivo é que sua operação funcione sem surpresas. Menos paradas, mais produção, mais lucro.</div>
-        </div>
+        <div><div class="dif-title">Foco Total em Confiabilidade</div><div class="dif-desc">Meu objetivo é que sua operação funcione sem surpresas. Menos paradas, mais produção, menos custo.</div></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- QUEM PODE SE BENEFICIAR -->
+<section class="section beneficia" id="beneficia">
+  <div class="section-eyebrow">Para quem é</div>
+  <h2 class="section-title" style="color:white">Quem pode se <em>beneficiar</em></h2>
+  <p class="section-sub">Se a sua empresa tem algum desses cenários, posso ajudar a transformar a situação com método, experiência e resultados documentados.</p>
+  <div class="ben-grid">
+    <div class="ben-card">
+      <div class="ben-icon">🏗️</div>
+      <div class="ben-title">Pequenas e Médias Indústrias</div>
+      <div class="ben-desc">Empresas que precisam profissionalizar a manutenção sem criar uma estrutura pesada — resultado com custo controlado.</div>
+    </div>
+    <div class="ben-card">
+      <div class="ben-icon">🔴</div>
+      <div class="ben-title">Operações com Falhas Recorrentes</div>
+      <div class="ben-desc">Máquinas que param sempre nos mesmos pontos. Problemas que voltam porque nunca foi atacada a causa raiz real.</div>
+    </div>
+    <div class="ben-card">
+      <div class="ben-icon">📂</div>
+      <div class="ben-title">Empresas sem Histórico de Manutenção</div>
+      <div class="ben-desc">Sem registros, sem indicadores, sem planejamento. Implanto do zero um sistema de gestão eficiente e sustentável.</div>
+    </div>
+    <div class="ben-card">
+      <div class="ben-icon">📊</div>
+      <div class="ben-title">Empresas sem PCM Implantado</div>
+      <div class="ben-desc">Manutenção ainda totalmente corretiva e reativa. Estruturo o planejamento preventivo e os indicadores de desempenho.</div>
+    </div>
+    <div class="ben-card">
+      <div class="ben-icon">💸</div>
+      <div class="ben-title">Custo de Manutenção Elevado</div>
+      <div class="ben-desc">Gastos com peças, retrabalho e emergências fora de controle. Identifico os gargalos e reduzo o custo total de manutenção.</div>
+    </div>
+    <div class="ben-card">
+      <div class="ben-icon">⚡</div>
+      <div class="ben-title">Manutenção Pouco Estruturada</div>
+      <div class="ben-desc">Equipe sem processo, sem padrão e sem ferramentas. Organizo o setor para gerar resultado consistente e previsível.</div>
+    </div>
+  </div>
+  <div class="ben-cta">
+    <p>"Se você se identificou com algum desses cenários, já é hora de agir."</p>
+    <a href="#contato" class="btn-gold">Quero Resolver Isso →</a>
+  </div>
+</section>
+
 <!-- SERVIÇOS -->
 <section class="section servicos" id="servicos">
-  <div class="section-eyebrow">O que ofereço</div>
-  <h2 class="section-title">Serviços de <em>consultoria</em><br>e organização industrial</h2>
-  <p class="section-sub">Cada serviço é desenhado para gerar resultado concreto na sua operação — redução de custo, aumento de disponibilidade e previsibilidade operacional.</p>
+  <div class="section-eyebrow">Soluções oferecidas</div>
+  <h2 class="section-title">Confiabilidade operacional<br>como <em>resultado</em></h2>
+  <p class="section-sub">Cada solução é aplicada com diagnóstico, plano de ação e acompanhamento de indicadores. Sem achismo — com método e resultado.</p>
   <div class="serv-grid">
     <div class="serv-card">
       <div class="serv-num">01</div>
-      <div class="serv-title">Diagnóstico de Manutenção</div>
-      <div class="serv-desc">Levantamento completo do cenário atual: equipamentos críticos, histórico de falhas, processos existentes e gaps operacionais. Entrega um relatório com plano de ação priorizado.</div>
-      <div class="serv-tags"><span class="serv-tag">Diagnóstico</span><span class="serv-tag">Análise de Criticidade</span><span class="serv-tag">Plano de Ação</span></div>
+      <div class="serv-title">Diagnóstico da Manutenção</div>
+      <div class="serv-desc">Levantamento completo do cenário atual: equipamentos críticos, histórico de falhas, gaps de processo e oportunidades de melhoria. Entrego um relatório com plano de ação priorizado.</div>
+      <div class="serv-tags"><span class="serv-tag">Diagnóstico</span><span class="serv-tag">Criticidade</span><span class="serv-tag">Plano de Ação</span></div>
     </div>
     <div class="serv-card">
       <div class="serv-num">02</div>
       <div class="serv-title">Implantação de PCM</div>
-      <div class="serv-desc">Estruturação completa do Planejamento e Controle de Manutenção: planos preventivos, indicadores de desempenho (MTBF, MTTR, OEE), ordens de serviço e gestão de ativos.</div>
+      <div class="serv-desc">Estruturação completa do Planejamento e Controle de Manutenção. Planos preventivos, ordens de serviço, indicadores (MTBF, MTTR, OEE) e gestão de ativos implantados do zero.</div>
       <div class="serv-tags"><span class="serv-tag">PCM</span><span class="serv-tag">MTBF/MTTR</span><span class="serv-tag">OEE</span><span class="serv-tag">Gestão de Ativos</span></div>
     </div>
     <div class="serv-card">
       <div class="serv-num">03</div>
-      <div class="serv-title">Redução de Falhas Crônicas</div>
-      <div class="serv-desc">Análise de causa raiz dos problemas recorrentes que geram paradas, desperdícios e custos ocultos. Implementação de solução definitiva com acompanhamento de resultado.</div>
+      <div class="serv-title">Eliminação de Falhas Crônicas</div>
+      <div class="serv-desc">Análise de causa raiz dos problemas recorrentes que geram paradas, desperdícios e custos ocultos. Implementação de solução definitiva com acompanhamento do resultado.</div>
       <div class="serv-tags"><span class="serv-tag">Causa Raiz</span><span class="serv-tag">RCM</span><span class="serv-tag">Melhoria Contínua</span></div>
     </div>
     <div class="serv-card">
       <div class="serv-num">04</div>
       <div class="serv-title">Manutenção Preventiva e Preditiva</div>
-      <div class="serv-desc">Criação de planos de manutenção baseados na criticidade dos equipamentos, histórico de falhas e ciclos operacionais. Redução do custo total de manutenção.</div>
+      <div class="serv-desc">Criação de planos baseados na criticidade dos equipamentos e histórico de falhas. Redução do custo de manutenção e aumento da disponibilidade dos ativos.</div>
       <div class="serv-tags"><span class="serv-tag">Preventiva</span><span class="serv-tag">Preditiva</span><span class="serv-tag">Lubrificação</span></div>
     </div>
     <div class="serv-card">
       <div class="serv-num">05</div>
       <div class="serv-title">Confiabilidade Operacional</div>
-      <div class="serv-desc">Implantação de metodologia de confiabilidade para garantir disponibilidade máxima dos equipamentos críticos. Gestão proativa com indicadores em tempo real.</div>
+      <div class="serv-desc">Implantação de metodologia de confiabilidade para garantir disponibilidade máxima dos equipamentos críticos. Gestão proativa com indicadores em tempo real e tomada de decisão baseada em dados.</div>
       <div class="serv-tags"><span class="serv-tag">Confiabilidade</span><span class="serv-tag">Disponibilidade</span><span class="serv-tag">KPIs</span></div>
     </div>
     <div class="serv-card">
       <div class="serv-num">06</div>
       <div class="serv-title">Gestão de Melhoria Contínua</div>
-      <div class="serv-desc">Estruturação de um sistema de registro, análise e acompanhamento de melhorias industriais. Transformação do conhecimento tácito em processos documentados e replicáveis.</div>
-      <div class="serv-tags"><span class="serv-tag">Melhoria Contínua</span><span class="serv-tag">Kaizen</span><span class="serv-tag">Documentação</span></div>
+      <div class="serv-desc">Estruturação do sistema de registro, análise e acompanhamento de melhorias. Transformo o conhecimento técnico da sua equipe em processos documentados, padronizados e replicáveis.</div>
+      <div class="serv-tags"><span class="serv-tag">Melhoria Contínua</span><span class="serv-tag">Kaizen</span><span class="serv-tag">Padronização</span></div>
     </div>
   </div>
 </section>
@@ -438,44 +400,55 @@ footer { background: #0c1510; text-align: center; padding: 1.5rem; font-size: 0.
 <!-- CASES -->
 <section class="section cases" id="cases">
   <div class="section-eyebrow">Resultados comprovados</div>
-  <h2 class="section-title">Cases <em>reais</em> de melhoria</h2>
-  <p class="section-sub">Cada caso foi documentado com situação inicial, intervenção realizada e resultado obtido. Clique para ver o relatório completo.</p>
+  <h2 class="section-title">Cases reais com <em>resultados</em> documentados</h2>
+  <p class="section-sub">Cada caso registrado com situação inicial, intervenção realizada, causa raiz identificada e resultado obtido. Clique para ver o relatório completo com fotos.</p>
   <div class="cases-filtros" id="filtros"></div>
   <div class="cases-grid" id="cases-grid"></div>
 </section>
 
-<!-- METODOLOGIA -->
-<section class="section metodologia" id="metodologia">
-  <div class="section-eyebrow">Como trabalho</div>
-  <h2 class="section-title">Metodologia de <em>trabalho</em></h2>
-  <p class="section-sub">Um processo estruturado e transparente, do diagnóstico à entrega de resultados mensuráveis.</p>
-  <div class="met-grid">
-    <div class="met-step">
-      <div class="met-arrow">→</div>
-      <div class="met-num">01</div>
-      <div class="met-icon">🔍</div>
-      <div class="met-title">Diagnóstico</div>
-      <div class="met-desc">Levantamento do cenário atual, equipamentos críticos, histórico de falhas e gaps de processo. Entrega de relatório detalhado.</div>
+<!-- COMO TRABALHO -->
+<section class="section como-trabalho" id="como-trabalho">
+  <div class="section-eyebrow">Processo de trabalho</div>
+  <h2 class="section-title" style="color:white">Como <em>trabalho</em></h2>
+  <p class="section-sub">Um processo estruturado e transparente. Do primeiro contato até o resultado documentado — sem achismo, sem improviso.</p>
+  <div class="etapas">
+    <div class="etapa">
+      <div class="etapa-num">01</div>
+      <div class="etapa-icon">🗂️</div>
+      <div class="etapa-title">Levantamento dos Ativos</div>
+      <div class="etapa-desc">Mapeamento completo dos equipamentos, criticidade, histórico disponível e situação atual da manutenção.</div>
     </div>
-    <div class="met-step">
-      <div class="met-arrow">→</div>
-      <div class="met-num">02</div>
-      <div class="met-icon">📐</div>
-      <div class="met-title">Planejamento</div>
-      <div class="met-desc">Definição das prioridades, plano de ação com prazos, metas de indicadores e recursos necessários para a intervenção.</div>
+    <div class="etapa">
+      <div class="etapa-num">02</div>
+      <div class="etapa-icon">🔍</div>
+      <div class="etapa-title">Diagnóstico dos Problemas</div>
+      <div class="etapa-desc">Análise técnica detalhada para entender quais problemas impactam mais a disponibilidade e o custo operacional.</div>
     </div>
-    <div class="met-step">
-      <div class="met-arrow">→</div>
-      <div class="met-num">03</div>
-      <div class="met-icon">⚙️</div>
-      <div class="met-title">Implementação</div>
-      <div class="met-desc">Execução das intervenções com documentação fotográfica, registro técnico e acompanhamento de cada etapa do processo.</div>
+    <div class="etapa">
+      <div class="etapa-num">03</div>
+      <div class="etapa-icon">🧩</div>
+      <div class="etapa-title">Identificação da Causa Raiz</div>
+      <div class="etapa-desc">Investigação técnica para encontrar a causa real — não apenas o sintoma — de cada falha recorrente.</div>
     </div>
-    <div class="met-step">
-      <div class="met-num">04</div>
-      <div class="met-icon">📊</div>
-      <div class="met-title">Acompanhamento</div>
-      <div class="met-desc">Monitoramento dos indicadores pós-intervenção, ajustes necessários e entrega de relatório final com resultados comprovados.</div>
+  </div>
+  <div class="etapas-row2" style="margin-top:2rem;position:relative;z-index:1;">
+    <div class="etapa">
+      <div class="etapa-num">04</div>
+      <div class="etapa-icon">📐</div>
+      <div class="etapa-title">Plano de Ação</div>
+      <div class="etapa-desc">Definição das intervenções prioritárias, prazos, recursos necessários e metas de indicadores a alcançar.</div>
+    </div>
+    <div class="etapa">
+      <div class="etapa-num">05</div>
+      <div class="etapa-icon">⚙️</div>
+      <div class="etapa-title">Implementação das Melhorias</div>
+      <div class="etapa-desc">Execução com documentação fotográfica, registro técnico completo e acompanhamento de cada etapa.</div>
+    </div>
+    <div class="etapa">
+      <div class="etapa-num">06</div>
+      <div class="etapa-icon">📊</div>
+      <div class="etapa-title">Acompanhamento dos Resultados</div>
+      <div class="etapa-desc">Monitoramento dos indicadores pós-intervenção e entrega de relatório final com resultados mensuráveis.</div>
     </div>
   </div>
 </section>
@@ -485,20 +458,21 @@ footer { background: #0c1510; text-align: center; padding: 1.5rem; font-size: 0.
   <div class="section-eyebrow">Ferramenta de apoio</div>
   <div class="sis-grid">
     <div>
+      <div class="sis-badge">⚙ Ferramenta de Apoio — Não é o produto principal</div>
       <h2 class="section-title">Gestão com <em>dados reais</em></h2>
-      <p class="sis-desc">Para apoiar meu trabalho de consultoria e organização da manutenção, desenvolvi o <strong>Mantto</strong> — um sistema de gestão que centraliza ordens de serviço, indicadores de desempenho e histórico de equipamentos.</p>
-      <p class="sis-desc">Não é um produto à venda. É a ferramenta que uso para garantir que a gestão da manutenção seja feita com dados precisos e decisões embasadas.</p>
-      <div class="sis-features">
-        <div class="sis-feat">Ordens de Serviço com histórico completo</div>
-        <div class="sis-feat">Indicadores MTBF, MTTR e disponibilidade</div>
+      <p class="sis-desc">Para apoiar minha atuação, desenvolvi o <strong>Mantto</strong> — um sistema que centraliza ordens de serviço, indicadores de desempenho e histórico de equipamentos. Ele me permite entregar relatórios precisos e gestão baseada em dados reais.</p>
+      <div class="sis-aviso">⚠ O Mantto é a ferramenta que uso para trabalhar melhor. Meu produto é o resultado que entrego — não o sistema em si.</div>
+      <div class="sis-features" style="margin-top:1.5rem">
+        <div class="sis-feat">Ordens de Serviço com histórico completo por equipamento</div>
+        <div class="sis-feat">Indicadores MTBF, MTTR, OEE e disponibilidade em tempo real</div>
         <div class="sis-feat">Controle de estoque de peças e insumos</div>
-        <div class="sis-feat">Relatórios e dashboards em tempo real</div>
-        <div class="sis-feat">Registro fotográfico de intervenções</div>
+        <div class="sis-feat">Relatórios com fotos e documentação técnica</div>
+        <div class="sis-feat">Registro de melhorias e análises de causa raiz</div>
       </div>
-      <a href="https://mantto.app.br" target="_blank" class="sis-link">Conhecer o Mantto →</a>
+      <a href="https://mantto.app.br" target="_blank" class="sis-link">Conhecer o sistema →</a>
     </div>
     <div class="sis-visual">
-      <div class="sis-visual-title">Indicadores de exemplo</div>
+      <div class="sis-visual-title">Indicadores acompanhados</div>
       <div class="kpi-grid">
         <div class="kpi-item"><div class="kpi-val">↑ MTBF</div><div class="kpi-label">Tempo médio entre falhas</div></div>
         <div class="kpi-item"><div class="kpi-val">↓ MTTR</div><div class="kpi-label">Tempo médio de reparo</div></div>
@@ -516,39 +490,15 @@ footer { background: #0c1510; text-align: center; padding: 1.5rem; font-size: 0.
   <div class="form-grid">
     <div>
       <div class="form-col-title">Formação Técnica</div>
-      <div class="form-item">
-        <div class="form-titulo">Técnico em Mecânica Industrial</div>
-        <div class="form-inst">Formação técnica profissionalizante</div>
-        <span class="form-status status-concluido">Concluído</span>
-      </div>
-      <div class="form-item">
-        <div class="form-titulo">Técnico em Automação Industrial</div>
-        <div class="form-inst">Formação técnica profissionalizante</div>
-        <span class="form-status status-concluido">Concluído</span>
-      </div>
-      <div class="form-item">
-        <div class="form-titulo">Tecnólogo em Gestão da Produção Industrial</div>
-        <div class="form-inst">Ensino Superior Tecnológico</div>
-        <span class="form-status status-andamento">Em andamento</span>
-      </div>
+      <div class="form-item"><div class="form-titulo">Técnico em Mecânica Industrial</div><div class="form-inst">Formação técnica profissionalizante</div><span class="form-status status-concluido">Concluído</span></div>
+      <div class="form-item"><div class="form-titulo">Técnico em Automação Industrial</div><div class="form-inst">Formação técnica profissionalizante</div><span class="form-status status-concluido">Concluído</span></div>
+      <div class="form-item"><div class="form-titulo">Tecnólogo em Gestão da Produção Industrial</div><div class="form-inst">Ensino Superior Tecnológico</div><span class="form-status status-andamento">Em andamento</span></div>
     </div>
     <div>
-      <div class="form-col-title">Experiência & Conhecimentos</div>
-      <div class="form-item">
-        <div class="form-titulo">Planejamento e Controle de Manutenção (PCM)</div>
-        <div class="form-inst">15 anos de aplicação prática em indústria</div>
-        <span class="form-status status-concluido">Experiência comprovada</span>
-      </div>
-      <div class="form-item">
-        <div class="form-titulo">Gestão de Confiabilidade Operacional</div>
-        <div class="form-inst">MTBF, MTTR, OEE, análise de criticidade</div>
-        <span class="form-status status-concluido">Aplicado em produção</span>
-      </div>
-      <div class="form-item">
-        <div class="form-titulo">Melhoria Contínua Industrial</div>
-        <div class="form-inst">Cases documentados com resultados mensuráveis</div>
-        <span class="form-status status-concluido">Cases disponíveis</span>
-      </div>
+      <div class="form-col-title">Experiência Comprovada</div>
+      <div class="form-item"><div class="form-titulo">Planejamento e Controle de Manutenção (PCM)</div><div class="form-inst">15 anos de aplicação prática em ambiente industrial</div><span class="form-status status-concluido">Aplicado em produção</span></div>
+      <div class="form-item"><div class="form-titulo">Gestão de Confiabilidade Operacional</div><div class="form-inst">MTBF, MTTR, OEE, análise de criticidade e disponibilidade</div><span class="form-status status-concluido">Resultados documentados</span></div>
+      <div class="form-item"><div class="form-titulo">Melhoria Contínua Industrial</div><div class="form-inst">Casos reais com problema, solução e resultado mensuráveis</div><span class="form-status status-concluido">Cases disponíveis</span></div>
     </div>
   </div>
 </section>
@@ -557,44 +507,49 @@ footer { background: #0c1510; text-align: center; padding: 1.5rem; font-size: 0.
 <section class="section contato" id="contato">
   <div class="contato-inner">
     <div class="section-eyebrow">Vamos trabalhar juntos</div>
-    <h2 class="section-title">Pronto para reduzir<br>as falhas da sua <em>operação?</em></h2>
-    <p class="contato-desc">Se você quer organizar a manutenção, reduzir paradas não planejadas e aumentar a confiabilidade operacional da sua empresa, vamos conversar.</p>
+    <h2 class="section-title" style="color:white">Sua operação merece<br>parar <em>menos.</em></h2>
+    <div class="contato-taglines">
+      <span>"Resultados reais aplicados na indústria."</span>
+      <span class="destaque">"Menos falhas. Mais confiabilidade."</span>
+      <span>"Transformando problemas recorrentes em melhorias permanentes."</span>
+    </div>
+    <p class="contato-desc">Se você quer organizar a manutenção, eliminar falhas recorrentes e aumentar a disponibilidade operacional da sua empresa — vamos conversar. Sem compromisso.</p>
     <div class="contato-links">
       <a href="https://www.linkedin.com/in/wanderson-carvalho-teixeira-29841922a" target="_blank" class="clink clink-gold">💼 Falar no LinkedIn</a>
-      <a href="https://wctmanutencao-lab.github.io" target="_blank" class="clink clink-ghost">📋 Ver Cases Completos</a>
+      <a href="#cases" class="clink clink-ghost">📋 Ver Cases Reais</a>
     </div>
   </div>
 </section>
 
-<footer>© 2026 Wanderson Carvalho Teixeira — Especialista em Manutenção Industrial & Confiabilidade Operacional</footer>
+<footer>© 2026 Wanderson Carvalho Teixeira — Soluções em Manutenção Industrial & Confiabilidade Operacional</footer>
 
 <script>
 var CASES = [
-  { id:1, titulo:"Conjunto de Escovas 01", categoria:"Qualidade", data:"25/01/2026", descricao:"Falha na transmissão de movimento — eixo motor desacoplado do conjunto de escovas. 5 pontos críticos identificados, análise de causa raiz e correção estrutural definitiva.", link:"https://leafy-kashata-1adf57.netlify.app/" },
-  { id:2, titulo:"Torre de Refrigeração", categoria:"Processo", data:"07/01/2026", descricao:"Distribuição irregular de água reduzindo eficiência do resfriamento. Diagnóstico do sistema, correção nos pontos de saída e ajuste das coméias com resultado imediato.", link:"https://silly-bublanina-55f5b1.netlify.app/" },
-  { id:3, titulo:"Reforma Misturador 01", categoria:"Produtividade", data:"30/12/2025", descricao:"Reforma completa com substituição de rolamentos, eixo helicoidal, resistências elétricas e reforço estrutural. Confiabilidade operacional restabelecida com documentação completa.", link:"https://wctmanutencao-lab.github.io/Misturador-01" },
-  { id:4, titulo:"Bomba de Circulação — Falha Crônica", categoria:"Processo", data:"02/11/2025", descricao:"Bomba travava cronicamente causando paradas gerais da fábrica. Análise de causa raiz identificou o problema real — solução definitiva implementada eliminando as paradas.", link:"https://remarkable-florentine-9a2610.netlify.app/" },
-  { id:5, titulo:"Adaptação Peneira SAGEC", categoria:"Produtividade", data:"02/04/2026", descricao:"Peneira adaptada com sistema duplo de telas para separação de material contaminado. Suporte de elevação de 300mm integrado ao moinho. Resultado: material limpo direto na produção.", link:"https://wctmanutencao-lab.github.io/relatorio-peneira.html" }
+  {id:1,titulo:"Conjunto de Escovas 01",categoria:"Qualidade",data:"25/01/2026",descricao:"Eixo motor desacoplado do conjunto de escovas causando falha na transmissão de movimento. Análise identificou 5 pontos críticos de falha simultâneos.",resultado:"Problema eliminado na raiz. Equipamento operando sem falhas após intervenção.",link:"https://leafy-kashata-1adf57.netlify.app/"},
+  {id:2,titulo:"Torre de Refrigeração",categoria:"Processo",data:"07/01/2026",descricao:"Distribuição irregular de água reduzia a eficiência do resfriamento, comprometendo a qualidade do processo produtivo. Causa raiz identificada nos pontos de saída obstruídos.",resultado:"Eficiência do resfriamento restabelecida. Processo produtivo normalizado.",link:"https://silly-bublanina-55f5b1.netlify.app/"},
+  {id:3,titulo:"Reforma Misturador 01",categoria:"Produtividade",data:"30/12/2025",descricao:"Misturador com desgaste crítico em múltiplos componentes: rolamentos, eixo helicoidal e resistências elétricas. Risco de parada total iminente.",resultado:"Confiabilidade operacional restabelecida. Redução de vibrações e aumento da vida útil dos componentes.",link:"https://wctmanutencao-lab.github.io/Misturador-01"},
+  {id:4,titulo:"Bomba de Circulação — Falha Crônica",categoria:"Processo",data:"02/11/2025",descricao:"Bomba travava de forma recorrente causando paradas gerais da fábrica. O problema era tratado de forma reativa há meses sem investigação da causa real.",resultado:"Causa raiz identificada e eliminada. Paradas recorrentes cessaram após intervenção definitiva.",link:"https://remarkable-florentine-9a2610.netlify.app/"},
+  {id:5,titulo:"Adaptação Peneira SAGEC",categoria:"Produtividade",data:"02/04/2026",descricao:"Peneira original incapaz de processar material de varrição contaminado com pedras, madeira, borracha e metal. Material virgem era desperdiçado junto com os contaminantes.",resultado:"Sistema duplo de telas permite separação eficaz. Material limpo direto no moinho. Custo de implementação: R$600.",link:"https://wctmanutencao-lab.github.io/relatorio-peneira.html"}
 ];
 
-var catAtiva = 'Todos';
-function getCat(c){ return c.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s/g,''); }
+var catAtiva='Todos';
+function getCat(c){return c.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s/g,'');}
 
 function renderCases(){
-  var cats = ['Todos'];
-  CASES.forEach(function(m){ if(cats.indexOf(m.categoria)===-1) cats.push(m.categoria); });
-  var f = document.getElementById('filtros');
+  var cats=['Todos'];
+  CASES.forEach(function(m){if(cats.indexOf(m.categoria)===-1)cats.push(m.categoria);});
+  var f=document.getElementById('filtros');
   f.innerHTML='';
   cats.forEach(function(cat){
     var b=document.createElement('button');
     b.className='case-filtro'+(cat===catAtiva?' ativo':'');
-    b.textContent=cat==='Todos'?'Todos os casos':cat;
+    b.textContent=cat==='Todos'?'Todos os cases':cat;
     b.onclick=function(){catAtiva=cat;renderCases();};
     f.appendChild(b);
   });
   var lista=catAtiva==='Todos'?CASES:CASES.filter(function(m){return m.categoria===catAtiva;});
   var g=document.getElementById('cases-grid');
-  if(!lista.length){g.innerHTML='<div class="cases-vazio">Nenhum case nesta categoria ainda.</div>';return;}
+  if(!lista.length){g.innerHTML='<div class="cases-vazio">Nenhum case nesta categoria.</div>';return;}
   g.innerHTML='';
   lista.forEach(function(m,i){
     var cat=getCat(m.categoria);
@@ -605,6 +560,7 @@ function renderCases(){
       '<div class="case-top"><span class="case-cat cat-'+cat+'">'+m.categoria+'</span><span class="case-data">'+m.data+'</span></div>'+
       '<div class="case-titulo">'+m.titulo+'</div>'+
       '<div class="case-desc">'+m.descricao+'</div>'+
+      '<div class="case-resultado">✅ <strong>Resultado:</strong> '+m.resultado+'</div>'+
       '<a class="case-link" href="'+m.link+'" target="_blank">'+
         '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>'+
         'Ver relatório completo'+
