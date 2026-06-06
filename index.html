@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wanderson Carvalho — Soluções em Manutenção Industrial</title>
+<title>Wanderson Teixeira — Soluções em Manutenção Industrial</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4EBPMSJ68V"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4EBPMSJ68V');</script>
@@ -121,17 +121,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .case-filtro.ativo{background:var(--steel);color:white;border-color:var(--steel);}
 .cases-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;}
 .case-card{border-radius:14px;padding:1.8rem;display:flex;flex-direction:column;transition:all 0.25s;position:relative;overflow:hidden;}
-.case-Qualidade{background:linear-gradient(140deg,#0a3d2e,#0d4a38);border:1px solid rgba(52,211,153,0.25);}
-.case-Processo{background:linear-gradient(140deg,#3d1a0a,#4a2010);border:1px solid rgba(251,146,60,0.25);}
-.case-Produtividade{background:linear-gradient(140deg,#0a1f3d,#0d2850);border:1px solid rgba(96,165,250,0.25);}
+.case-Qualidade,.case-Quality,.case-Calidad{background:linear-gradient(140deg,#0a3d2e,#0d4a38);border:1px solid rgba(52,211,153,0.25);}
+.case-Processo,.case-Process,.case-Proceso{background:linear-gradient(140deg,#3d1a0a,#4a2010);border:1px solid rgba(251,146,60,0.25);}
+.case-Produtividade,.case-Productivity,.case-Productividad{background:linear-gradient(140deg,#0a1f3d,#0d2850);border:1px solid rgba(96,165,250,0.25);}
 .case-Seguranca{background:linear-gradient(140deg,#3d0a0a,#4a1010);border:1px solid rgba(252,165,165,0.25);}
+.cat-Qualidade,.cat-Quality,.cat-Calidad{background:rgba(52,211,153,0.2);color:#6ee7b7;border:1px solid rgba(52,211,153,0.3);}
+.cat-Processo,.cat-Process,.cat-Proceso{background:rgba(251,146,60,0.2);color:#fdba74;border:1px solid rgba(251,146,60,0.3);}
+.cat-Produtividade,.cat-Productivity,.cat-Productividad{background:rgba(96,165,250,0.2);color:#93c5fd;border:1px solid rgba(96,165,250,0.3);}
+.cat-Seguranca{background:rgba(252,165,165,0.2);color:#fca5a5;border:1px solid rgba(252,165,165,0.3);}
 .case-card:hover{transform:translateY(-5px);box-shadow:0 20px 48px rgba(0,0,0,0.2);}
 .case-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;}
 .case-cat{font-size:0.65rem;font-weight:700;padding:0.2rem 0.7rem;border-radius:4px;text-transform:uppercase;letter-spacing:0.5px;}
-.cat-Qualidade{background:rgba(52,211,153,0.2);color:#6ee7b7;border:1px solid rgba(52,211,153,0.3);}
-.cat-Processo{background:rgba(251,146,60,0.2);color:#fdba74;border:1px solid rgba(251,146,60,0.3);}
-.cat-Produtividade{background:rgba(96,165,250,0.2);color:#93c5fd;border:1px solid rgba(96,165,250,0.3);}
-.cat-Seguranca{background:rgba(252,165,165,0.2);color:#fca5a5;border:1px solid rgba(252,165,165,0.3);}
 .case-data{font-size:0.68rem;color:rgba(255,255,255,0.35);}
 .case-titulo{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700;color:white;margin-bottom:0.6rem;line-height:1.3;}
 .case-desc{font-size:0.8rem;line-height:1.65;color:rgba(255,255,255,0.55);flex:1;margin-bottom:0.8rem;}
@@ -207,6 +207,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
 footer{background:#0c1510;text-align:center;padding:1.5rem;font-size:0.72rem;color:rgba(255,255,255,0.2);}
 
+/* BANDEIRAS */
+.lang-flags{display:flex;align-items:center;gap:0.35rem;margin-left:0.9rem;}
+.lang-btn{background:none;border:2px solid transparent;border-radius:6px;cursor:pointer;font-size:1.2rem;padding:0.15rem 0.25rem;line-height:1;transition:all 0.18s;opacity:0.55;}
+.lang-btn:hover{opacity:1;border-color:var(--border);transform:scale(1.15);}
+.lang-btn.active{opacity:1;border-color:var(--gold);background:var(--gold-pale);}
+
+/* WHATSAPP BUTTON */
+.clink-whatsapp{background:#25D366;color:#fff;}
+.clink-whatsapp:hover{background:#1ebe5d;transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,0.3);}
+
+
 @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 
 @media(max-width:1024px){.serv-grid{grid-template-columns:1fr 1fr;}.etapas,.etapas-row2{grid-template-columns:1fr 1fr;}.ben-grid{grid-template-columns:1fr 1fr;}}
@@ -224,55 +235,65 @@ footer{background:#0c1510;text-align:center;padding:1.5rem;font-size:0.72rem;col
 <body>
 
 <nav>
-  <div class="nav-logo">Wanderson <span>Carvalho</span></div>
+  <div style="display:flex;align-items:center;">
+    <div class="nav-logo">Wanderson <span>Teixeira</span></div>
+    <div style="display:flex;flex-direction:column;align-items:flex-start;gap:0.2rem;margin-left:0.9rem;">
+      <div class="lang-flags">
+        <button class="lang-btn active" onclick="setLang('pt')" data-lang="pt" title="Português">🇧🇷</button>
+        <button class="lang-btn" onclick="setLang('en')" data-lang="en" title="English">🇺🇸</button>
+        <button class="lang-btn" onclick="setLang('es')" data-lang="es" title="Español">🇪🇸</button>
+      </div>
+      <div style="font-size:0.58rem;color:var(--muted);letter-spacing:0.3px;white-space:nowrap;">Available in: Portuguese | English | Spanish</div>
+    </div>
+  </div>
   <div class="nav-links">
-    <a href="#posicionamento">Sobre</a>
-    <a href="#beneficia">Para quem</a>
-    <a href="#servicos">Soluções</a>
-    <a href="#cases">Cases</a>
-    <a href="#como-trabalho">Como trabalho</a>
-    <a href="#contato" class="nav-cta">Fale Comigo</a>
+    <a href="#posicionamento" data-i18n="nav_about">Sobre</a>
+    <a href="#beneficia" data-i18n="nav_forwhom">Para quem</a>
+    <a href="#servicos" data-i18n="nav_services">Soluções</a>
+    <a href="#cases" data-i18n="nav_cases">Cases</a>
+    <a href="#como-trabalho" data-i18n="nav_how">Como trabalho</a>
+    <a href="#contato" class="nav-cta" data-i18n="nav_cta">Fale Comigo</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <div class="eyebrow">Soluções em Manutenção Industrial</div>
-    <h1 class="hero-h1">Menos falhas.<br>Mais <em>confiabilidade.</em></h1>
-    <p class="hero-sub">Organizo a manutenção da sua indústria, elimino falhas recorrentes e implanto confiabilidade operacional com metodologia comprovada e resultados mensuráveis.</p>
-    <p class="hero-tagline">"Transformando problemas recorrentes em melhorias permanentes."</p>
+    <div class="eyebrow" data-i18n="hero_eyebrow">Soluções em Manutenção Industrial</div>
+    <h1 class="hero-h1" data-i18n="hero_h1">Menos falhas.<br>Mais <em>confiabilidade.</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Organizo a manutenção da sua indústria, elimino falhas recorrentes e implanto confiabilidade operacional com metodologia comprovada e resultados mensuráveis.</p>
+    <p class="hero-tagline" data-i18n="hero_tagline">"Transformando problemas recorrentes em melhorias permanentes."</p>
     <div class="hero-stats">
-      <div><div class="hstat-num">15+</div><div class="hstat-label">Anos de experiência</div></div>
-      <div><div class="hstat-num">5+</div><div class="hstat-label">Cases documentados</div></div>
-      <div><div class="hstat-num">PCM</div><div class="hstat-label">Gestão & Indicadores</div></div>
+      <div><div class="hstat-num">15+</div><div class="hstat-label" data-i18n="stat_exp">Anos de experiência</div></div>
+      <div><div class="hstat-num">5+</div><div class="hstat-label" data-i18n="stat_cases">Cases documentados</div></div>
+      <div><div class="hstat-num">PCM</div><div class="hstat-label" data-i18n="stat_pcm">Gestão & Indicadores</div></div>
     </div>
     <div class="hero-ctas">
-      <a href="#contato" class="btn-gold">Quero Reduzir Falhas →</a>
-      <a href="#cases" class="btn-ghost">Ver Resultados Reais</a>
+      <a href="#contato" class="btn-gold" data-i18n="cta_reduce">Quero Reduzir Falhas →</a>
+      <a href="#cases" class="btn-ghost" data-i18n="cta_results">Ver Resultados Reais</a>
     </div>
   </div>
   <div class="hero-right">
     <div class="hero-cards">
       <div class="hcard hcard-gold">
         <div class="hcard-icon">📉</div>
-        <div class="hcard-title">Redução de Paradas Não Planejadas</div>
-        <div class="hcard-desc">Diagnóstico e planos preventivos que eliminam as falhas antes que elas parem sua produção.</div>
+        <div class="hcard-title" data-i18n="hcard1_title">Redução de Paradas Não Planejadas</div>
+        <div class="hcard-desc" data-i18n="hcard1_desc">Diagnóstico e planos preventivos que eliminam as falhas antes que elas parem sua produção.</div>
       </div>
       <div class="hcard">
         <div class="hcard-icon">⚙️</div>
-        <div class="hcard-title">Organização da Manutenção (PCM)</div>
-        <div class="hcard-desc">Indicadores reais: MTBF, MTTR, OEE e disponibilidade sob controle.</div>
+        <div class="hcard-title" data-i18n="hcard2_title">Organização da Manutenção (PCM)</div>
+        <div class="hcard-desc" data-i18n="hcard2_desc">Indicadores reais: MTBF, MTTR, OEE e disponibilidade sob controle.</div>
       </div>
       <div class="hcard">
         <div class="hcard-icon">🔍</div>
-        <div class="hcard-title">Eliminação de Causas Raiz</div>
-        <div class="hcard-desc">Análise técnica para resolver o problema de verdade — não apenas tratar o sintoma.</div>
+        <div class="hcard-title" data-i18n="hcard3_title">Eliminação de Causas Raiz</div>
+        <div class="hcard-desc" data-i18n="hcard3_desc">Análise técnica para resolver o problema de verdade — não apenas tratar o sintoma.</div>
       </div>
       <div class="hcard">
         <div class="hcard-icon">📈</div>
-        <div class="hcard-title">Aumento de Disponibilidade</div>
-        <div class="hcard-desc">Mais horas de máquina rodando, menos custo de manutenção corretiva emergencial.</div>
+        <div class="hcard-title" data-i18n="hcard4_title">Aumento de Disponibilidade</div>
+        <div class="hcard-desc" data-i18n="hcard4_desc">Mais horas de máquina rodando, menos custo de manutenção corretiva emergencial.</div>
       </div>
     </div>
   </div>
@@ -280,30 +301,30 @@ footer{background:#0c1510;text-align:center;padding:1.5rem;font-size:0.72rem;col
 
 <!-- POSICIONAMENTO -->
 <section class="section posicionamento" id="posicionamento">
-  <div class="section-eyebrow">Quem sou eu</div>
+  <div class="section-eyebrow" data-i18n="pos_eyebrow">Quem sou eu</div>
   <div class="pos-grid">
     <div>
-      <h2 class="section-title">15 anos<br>resolvendo <em>problemas</em><br>industriais reais</h2>
-      <div class="pos-quote">"Não vendo software. Vendo resultado operacional. Minha entrega é sua máquina funcionando."</div>
-      <p class="pos-text">Iniciei minha carreira como mecânico industrial e evoluí ao longo de 15 anos para a gestão completa da manutenção. Atualmente sou o único responsável pelo setor de manutenção de uma indústria — coordenando desde a execução técnica até os indicadores estratégicos de confiabilidade.</p>
-      <p class="pos-text">Sou Técnico em Mecânica Industrial, Técnico em Automação Industrial e estou cursando Tecnólogo em Gestão da Produção Industrial. Esse conjunto de formações me permite enxergar o problema tanto do chão de fábrica quanto da gestão.</p>
+      <h2 class="section-title" data-i18n="pos_title">15 anos<br>resolvendo <em>problemas</em><br>industriais reais</h2>
+      <div class="pos-quote" data-i18n="pos_quote">"Não vendo software. Vendo resultado operacional. Minha entrega é sua máquina funcionando."</div>
+      <p class="pos-text" data-i18n="pos_text1">Iniciei minha carreira como mecânico industrial e evoluí ao longo de 15 anos para a gestão completa da manutenção. Atualmente sou o único responsável pelo setor de manutenção de uma indústria — coordenando desde a execução técnica até os indicadores estratégicos de confiabilidade.</p>
+      <p class="pos-text" data-i18n="pos_text2">Sou Técnico em Mecânica Industrial, Técnico em Automação Industrial e estou cursando Tecnólogo em Gestão da Produção Industrial. Esse conjunto de formações me permite enxergar o problema tanto do chão de fábrica quanto da gestão.</p>
     </div>
     <div class="diferenciais">
       <div class="dif-item">
         <div class="dif-icon">🏭</div>
-        <div><div class="dif-title">Experiência Real de Chão de Fábrica</div><div class="dif-desc">Cada solução que proponho foi testada na prática. Não trabalho com teoria — trabalho com resultado mensurável.</div></div>
+        <div><div class="dif-title" data-i18n="dif1_title">Experiência Real de Chão de Fábrica</div><div class="dif-desc" data-i18n="dif1_desc">Cada solução que proponho foi testada na prática. Não trabalho com teoria — trabalho com resultado mensurável.</div></div>
       </div>
       <div class="dif-item">
         <div class="dif-icon">📐</div>
-        <div><div class="dif-title">Visão Técnica + Visão de Gestão</div><div class="dif-desc">Combino o conhecimento técnico de mecânica e automação com a gestão estratégica da manutenção via PCM e indicadores.</div></div>
+        <div><div class="dif-title" data-i18n="dif2_title">Visão Técnica + Visão de Gestão</div><div class="dif-desc" data-i18n="dif2_desc">Combino o conhecimento técnico de mecânica e automação com a gestão estratégica da manutenção via PCM e indicadores.</div></div>
       </div>
       <div class="dif-item">
         <div class="dif-icon">📋</div>
-        <div><div class="dif-title">Casos Documentados com Resultados</div><div class="dif-desc">Cada intervenção gera um relatório completo: problema, causa raiz, solução aplicada e resultado comprovado.</div></div>
+        <div><div class="dif-title" data-i18n="dif3_title">Casos Documentados com Resultados</div><div class="dif-desc" data-i18n="dif3_desc">Cada intervenção gera um relatório completo: problema, causa raiz, solução aplicada e resultado comprovado.</div></div>
       </div>
       <div class="dif-item">
         <div class="dif-icon">🎯</div>
-        <div><div class="dif-title">Foco Total em Confiabilidade</div><div class="dif-desc">Meu objetivo é que sua operação funcione sem surpresas. Menos paradas, mais produção, menos custo.</div></div>
+        <div><div class="dif-title" data-i18n="dif4_title">Foco Total em Confiabilidade</div><div class="dif-desc" data-i18n="dif4_desc">Meu objetivo é que sua operação funcione sem surpresas. Menos paradas, mais produção, menos custo.</div></div>
       </div>
     </div>
   </div>
@@ -311,173 +332,173 @@ footer{background:#0c1510;text-align:center;padding:1.5rem;font-size:0.72rem;col
 
 <!-- QUEM PODE SE BENEFICIAR -->
 <section class="section beneficia" id="beneficia">
-  <div class="section-eyebrow">Para quem é</div>
-  <h2 class="section-title" style="color:white">Quem pode se <em>beneficiar</em></h2>
-  <p class="section-sub">Se a sua empresa tem algum desses cenários, posso ajudar a transformar a situação com método, experiência e resultados documentados.</p>
+  <div class="section-eyebrow" data-i18n="ben_eyebrow">Para quem é</div>
+  <h2 class="section-title" style="color:white" data-i18n="ben_title">Quem pode se <em>beneficiar</em></h2>
+  <p class="section-sub" data-i18n="ben_sub">Se a sua empresa tem algum desses cenários, posso ajudar a transformar a situação com método, experiência e resultados documentados.</p>
   <div class="ben-grid">
     <div class="ben-card">
       <div class="ben-icon">🏗️</div>
-      <div class="ben-title">Pequenas e Médias Indústrias</div>
-      <div class="ben-desc">Empresas que precisam profissionalizar a manutenção sem criar uma estrutura pesada — resultado com custo controlado.</div>
+      <div class="ben-title" data-i18n="ben1_title">Pequenas e Médias Indústrias</div>
+      <div class="ben-desc" data-i18n="ben1_desc">Empresas que precisam profissionalizar a manutenção sem criar uma estrutura pesada — resultado com custo controlado.</div>
     </div>
     <div class="ben-card">
       <div class="ben-icon">🔴</div>
-      <div class="ben-title">Operações com Falhas Recorrentes</div>
-      <div class="ben-desc">Máquinas que param sempre nos mesmos pontos. Problemas que voltam porque nunca foi atacada a causa raiz real.</div>
+      <div class="ben-title" data-i18n="ben2_title">Operações com Falhas Recorrentes</div>
+      <div class="ben-desc" data-i18n="ben2_desc">Máquinas que param sempre nos mesmos pontos. Problemas que voltam porque nunca foi atacada a causa raiz real.</div>
     </div>
     <div class="ben-card">
       <div class="ben-icon">📂</div>
-      <div class="ben-title">Empresas sem Histórico de Manutenção</div>
-      <div class="ben-desc">Sem registros, sem indicadores, sem planejamento. Implanto do zero um sistema de gestão eficiente e sustentável.</div>
+      <div class="ben-title" data-i18n="ben3_title">Empresas sem Histórico de Manutenção</div>
+      <div class="ben-desc" data-i18n="ben3_desc">Sem registros, sem indicadores, sem planejamento. Implanto do zero um sistema de gestão eficiente e sustentável.</div>
     </div>
     <div class="ben-card">
       <div class="ben-icon">📊</div>
-      <div class="ben-title">Empresas sem PCM Implantado</div>
-      <div class="ben-desc">Manutenção ainda totalmente corretiva e reativa. Estruturo o planejamento preventivo e os indicadores de desempenho.</div>
+      <div class="ben-title" data-i18n="ben4_title">Empresas sem PCM Implantado</div>
+      <div class="ben-desc" data-i18n="ben4_desc">Manutenção ainda totalmente corretiva e reativa. Estruturo o planejamento preventivo e os indicadores de desempenho.</div>
     </div>
     <div class="ben-card">
       <div class="ben-icon">💸</div>
-      <div class="ben-title">Custo de Manutenção Elevado</div>
-      <div class="ben-desc">Gastos com peças, retrabalho e emergências fora de controle. Identifico os gargalos e reduzo o custo total de manutenção.</div>
+      <div class="ben-title" data-i18n="ben5_title">Custo de Manutenção Elevado</div>
+      <div class="ben-desc" data-i18n="ben5_desc">Gastos com peças, retrabalho e emergências fora de controle. Identifico os gargalos e reduzo o custo total de manutenção.</div>
     </div>
     <div class="ben-card">
       <div class="ben-icon">⚡</div>
-      <div class="ben-title">Manutenção Pouco Estruturada</div>
-      <div class="ben-desc">Equipe sem processo, sem padrão e sem ferramentas. Organizo o setor para gerar resultado consistente e previsível.</div>
+      <div class="ben-title" data-i18n="ben6_title">Manutenção Pouco Estruturada</div>
+      <div class="ben-desc" data-i18n="ben6_desc">Equipe sem processo, sem padrão e sem ferramentas. Organizo o setor para gerar resultado consistente e previsível.</div>
     </div>
   </div>
   <div class="ben-cta">
-    <p>"Se você se identificou com algum desses cenários, já é hora de agir."</p>
-    <a href="#contato" class="btn-gold">Quero Resolver Isso →</a>
+    <p data-i18n="ben_cta_p">"Se você se identificou com algum desses cenários, já é hora de agir."</p>
+    <a href="#contato" class="btn-gold" data-i18n="ben_cta_btn">Quero Resolver Isso →</a>
   </div>
 </section>
 
 <!-- SERVIÇOS -->
 <section class="section servicos" id="servicos">
-  <div class="section-eyebrow">Soluções oferecidas</div>
-  <h2 class="section-title">Confiabilidade operacional<br>como <em>resultado</em></h2>
-  <p class="section-sub">Cada solução é aplicada com diagnóstico, plano de ação e acompanhamento de indicadores. Sem achismo — com método e resultado.</p>
+  <div class="section-eyebrow" data-i18n="serv_eyebrow">Soluções oferecidas</div>
+  <h2 class="section-title" data-i18n="serv_title">Confiabilidade operacional<br>como <em>resultado</em></h2>
+  <p class="section-sub" data-i18n="serv_sub">Cada solução é aplicada com diagnóstico, plano de ação e acompanhamento de indicadores. Sem achismo — com método e resultado.</p>
   <div class="serv-grid">
     <div class="serv-card">
       <div class="serv-num">01</div>
-      <div class="serv-title">Diagnóstico da Manutenção</div>
-      <div class="serv-desc">Levantamento completo do cenário atual: equipamentos críticos, histórico de falhas, gaps de processo e oportunidades de melhoria. Entrego um relatório com plano de ação priorizado.</div>
-      <div class="serv-tags"><span class="serv-tag">Diagnóstico</span><span class="serv-tag">Criticidade</span><span class="serv-tag">Plano de Ação</span></div>
+      <div class="serv-title" data-i18n="serv1_title">Diagnóstico da Manutenção</div>
+      <div class="serv-desc" data-i18n="serv1_desc">Levantamento completo do cenário atual: equipamentos críticos, histórico de falhas, gaps de processo e oportunidades de melhoria. Entrego um relatório com plano de ação priorizado.</div>
+      <div class="serv-tags"><span class="serv-tag" data-i18n="serv1_tag1">Diagnóstico</span><span class="serv-tag" data-i18n="serv1_tag2">Criticidade</span><span class="serv-tag" data-i18n="serv1_tag3">Plano de Ação</span></div>
     </div>
     <div class="serv-card">
       <div class="serv-num">02</div>
-      <div class="serv-title">Implantação de PCM</div>
-      <div class="serv-desc">Estruturação completa do Planejamento e Controle de Manutenção. Planos preventivos, ordens de serviço, indicadores (MTBF, MTTR, OEE) e gestão de ativos implantados do zero.</div>
-      <div class="serv-tags"><span class="serv-tag">PCM</span><span class="serv-tag">MTBF/MTTR</span><span class="serv-tag">OEE</span><span class="serv-tag">Gestão de Ativos</span></div>
+      <div class="serv-title" data-i18n="serv2_title">Implantação de PCM</div>
+      <div class="serv-desc" data-i18n="serv2_desc">Estruturação completa do Planejamento e Controle de Manutenção. Planos preventivos, ordens de serviço, indicadores (MTBF, MTTR, OEE) e gestão de ativos implantados do zero.</div>
+      <div class="serv-tags"><span class="serv-tag">PCM</span><span class="serv-tag">MTBF/MTTR</span><span class="serv-tag">OEE</span><span class="serv-tag" data-i18n="serv2_tag4">Gestão de Ativos</span></div>
     </div>
     <div class="serv-card">
       <div class="serv-num">03</div>
-      <div class="serv-title">Eliminação de Falhas Crônicas</div>
-      <div class="serv-desc">Análise de causa raiz dos problemas recorrentes que geram paradas, desperdícios e custos ocultos. Implementação de solução definitiva com acompanhamento do resultado.</div>
-      <div class="serv-tags"><span class="serv-tag">Causa Raiz</span><span class="serv-tag">RCM</span><span class="serv-tag">Melhoria Contínua</span></div>
+      <div class="serv-title" data-i18n="serv3_title">Eliminação de Falhas Crônicas</div>
+      <div class="serv-desc" data-i18n="serv3_desc">Análise de causa raiz dos problemas recorrentes que geram paradas, desperdícios e custos ocultos. Implementação de solução definitiva com acompanhamento do resultado.</div>
+      <div class="serv-tags"><span class="serv-tag" data-i18n="serv3_tag1">Causa Raiz</span><span class="serv-tag">RCM</span><span class="serv-tag" data-i18n="serv3_tag3">Melhoria Contínua</span></div>
     </div>
     <div class="serv-card">
       <div class="serv-num">04</div>
-      <div class="serv-title">Manutenção Preventiva e Preditiva</div>
-      <div class="serv-desc">Criação de planos baseados na criticidade dos equipamentos e histórico de falhas. Redução do custo de manutenção e aumento da disponibilidade dos ativos.</div>
-      <div class="serv-tags"><span class="serv-tag">Preventiva</span><span class="serv-tag">Preditiva</span><span class="serv-tag">Lubrificação</span></div>
+      <div class="serv-title" data-i18n="serv4_title">Manutenção Preventiva e Preditiva</div>
+      <div class="serv-desc" data-i18n="serv4_desc">Criação de planos baseados na criticidade dos equipamentos e histórico de falhas. Redução do custo de manutenção e aumento da disponibilidade dos ativos.</div>
+      <div class="serv-tags"><span class="serv-tag" data-i18n="serv4_tag1">Preventiva</span><span class="serv-tag" data-i18n="serv4_tag2">Preditiva</span><span class="serv-tag" data-i18n="serv4_tag3">Lubrificação</span></div>
     </div>
     <div class="serv-card">
       <div class="serv-num">05</div>
-      <div class="serv-title">Confiabilidade Operacional</div>
-      <div class="serv-desc">Implantação de metodologia de confiabilidade para garantir disponibilidade máxima dos equipamentos críticos. Gestão proativa com indicadores em tempo real e tomada de decisão baseada em dados.</div>
-      <div class="serv-tags"><span class="serv-tag">Confiabilidade</span><span class="serv-tag">Disponibilidade</span><span class="serv-tag">KPIs</span></div>
+      <div class="serv-title" data-i18n="serv5_title">Confiabilidade Operacional</div>
+      <div class="serv-desc" data-i18n="serv5_desc">Implantação de metodologia de confiabilidade para garantir disponibilidade máxima dos equipamentos críticos. Gestão proativa com indicadores em tempo real e tomada de decisão baseada em dados.</div>
+      <div class="serv-tags"><span class="serv-tag" data-i18n="serv5_tag1">Confiabilidade</span><span class="serv-tag" data-i18n="serv5_tag2">Disponibilidade</span><span class="serv-tag">KPIs</span></div>
     </div>
     <div class="serv-card">
       <div class="serv-num">06</div>
-      <div class="serv-title">Gestão de Melhoria Contínua</div>
-      <div class="serv-desc">Estruturação do sistema de registro, análise e acompanhamento de melhorias. Transformo o conhecimento técnico da sua equipe em processos documentados, padronizados e replicáveis.</div>
-      <div class="serv-tags"><span class="serv-tag">Melhoria Contínua</span><span class="serv-tag">Kaizen</span><span class="serv-tag">Padronização</span></div>
+      <div class="serv-title" data-i18n="serv6_title">Gestão de Melhoria Contínua</div>
+      <div class="serv-desc" data-i18n="serv6_desc">Estruturação do sistema de registro, análise e acompanhamento de melhorias. Transformo o conhecimento técnico da sua equipe em processos documentados, padronizados e replicáveis.</div>
+      <div class="serv-tags"><span class="serv-tag" data-i18n="serv6_tag1">Melhoria Contínua</span><span class="serv-tag">Kaizen</span><span class="serv-tag" data-i18n="serv6_tag3">Padronização</span></div>
     </div>
   </div>
 </section>
 
 <!-- CASES -->
 <section class="section cases" id="cases">
-  <div class="section-eyebrow">Resultados comprovados</div>
-  <h2 class="section-title">Cases reais com <em>resultados</em> documentados</h2>
-  <p class="section-sub">Cada caso registrado com situação inicial, intervenção realizada, causa raiz identificada e resultado obtido. Clique para ver o relatório completo com fotos.</p>
+  <div class="section-eyebrow" data-i18n="cases_eyebrow">Resultados comprovados</div>
+  <h2 class="section-title" data-i18n="cases_title">Cases reais com <em>resultados</em> documentados</h2>
+  <p class="section-sub" data-i18n="cases_sub">Cada caso registrado com situação inicial, intervenção realizada, causa raiz identificada e resultado obtido. Clique para ver o relatório completo com fotos.</p>
   <div class="cases-filtros" id="filtros"></div>
   <div class="cases-grid" id="cases-grid"></div>
 </section>
 
 <!-- COMO TRABALHO -->
 <section class="section como-trabalho" id="como-trabalho">
-  <div class="section-eyebrow">Processo de trabalho</div>
-  <h2 class="section-title" style="color:white">Como <em>trabalho</em></h2>
-  <p class="section-sub">Um processo estruturado e transparente. Do primeiro contato até o resultado documentado — sem achismo, sem improviso.</p>
+  <div class="section-eyebrow" data-i18n="como_eyebrow">Processo de trabalho</div>
+  <h2 class="section-title" style="color:white" data-i18n="como_title">Como <em>trabalho</em></h2>
+  <p class="section-sub" data-i18n="como_sub">Um processo estruturado e transparente. Do primeiro contato até o resultado documentado — sem achismo, sem improviso.</p>
   <div class="etapas">
     <div class="etapa">
       <div class="etapa-num">01</div>
       <div class="etapa-icon">🗂️</div>
-      <div class="etapa-title">Levantamento dos Ativos</div>
-      <div class="etapa-desc">Mapeamento completo dos equipamentos, criticidade, histórico disponível e situação atual da manutenção.</div>
+      <div class="etapa-title" data-i18n="etapa1_title">Levantamento dos Ativos</div>
+      <div class="etapa-desc" data-i18n="etapa1_desc">Mapeamento completo dos equipamentos, criticidade, histórico disponível e situação atual da manutenção.</div>
     </div>
     <div class="etapa">
       <div class="etapa-num">02</div>
       <div class="etapa-icon">🔍</div>
-      <div class="etapa-title">Diagnóstico dos Problemas</div>
-      <div class="etapa-desc">Análise técnica detalhada para entender quais problemas impactam mais a disponibilidade e o custo operacional.</div>
+      <div class="etapa-title" data-i18n="etapa2_title">Diagnóstico dos Problemas</div>
+      <div class="etapa-desc" data-i18n="etapa2_desc">Análise técnica detalhada para entender quais problemas impactam mais a disponibilidade e o custo operacional.</div>
     </div>
     <div class="etapa">
       <div class="etapa-num">03</div>
       <div class="etapa-icon">🧩</div>
-      <div class="etapa-title">Identificação da Causa Raiz</div>
-      <div class="etapa-desc">Investigação técnica para encontrar a causa real — não apenas o sintoma — de cada falha recorrente.</div>
+      <div class="etapa-title" data-i18n="etapa3_title">Identificação da Causa Raiz</div>
+      <div class="etapa-desc" data-i18n="etapa3_desc">Investigação técnica para encontrar a causa real — não apenas o sintoma — de cada falha recorrente.</div>
     </div>
   </div>
   <div class="etapas-row2" style="margin-top:2rem;position:relative;z-index:1;">
     <div class="etapa">
       <div class="etapa-num">04</div>
       <div class="etapa-icon">📐</div>
-      <div class="etapa-title">Plano de Ação</div>
-      <div class="etapa-desc">Definição das intervenções prioritárias, prazos, recursos necessários e metas de indicadores a alcançar.</div>
+      <div class="etapa-title" data-i18n="etapa4_title">Plano de Ação</div>
+      <div class="etapa-desc" data-i18n="etapa4_desc">Definição das intervenções prioritárias, prazos, recursos necessários e metas de indicadores a alcançar.</div>
     </div>
     <div class="etapa">
       <div class="etapa-num">05</div>
       <div class="etapa-icon">⚙️</div>
-      <div class="etapa-title">Implementação das Melhorias</div>
-      <div class="etapa-desc">Execução com documentação fotográfica, registro técnico completo e acompanhamento de cada etapa.</div>
+      <div class="etapa-title" data-i18n="etapa5_title">Implementação das Melhorias</div>
+      <div class="etapa-desc" data-i18n="etapa5_desc">Execução com documentação fotográfica, registro técnico completo e acompanhamento de cada etapa.</div>
     </div>
     <div class="etapa">
       <div class="etapa-num">06</div>
       <div class="etapa-icon">📊</div>
-      <div class="etapa-title">Acompanhamento dos Resultados</div>
-      <div class="etapa-desc">Monitoramento dos indicadores pós-intervenção e entrega de relatório final com resultados mensuráveis.</div>
+      <div class="etapa-title" data-i18n="etapa6_title">Acompanhamento dos Resultados</div>
+      <div class="etapa-desc" data-i18n="etapa6_desc">Monitoramento dos indicadores pós-intervenção e entrega de relatório final com resultados mensuráveis.</div>
     </div>
   </div>
 </section>
 
 <!-- SISTEMA -->
 <section class="section sistema" id="sistema">
-  <div class="section-eyebrow">Ferramenta de apoio</div>
+  <div class="section-eyebrow" data-i18n="sis_eyebrow">Ferramenta de apoio</div>
   <div class="sis-grid">
     <div>
-      <div class="sis-badge">⚙ Ferramenta de Apoio — Não é o produto principal</div>
-      <h2 class="section-title">Gestão com <em>dados reais</em></h2>
-      <p class="sis-desc">Para apoiar minha atuação, desenvolvi o <strong>Mantto</strong> — um sistema que centraliza ordens de serviço, indicadores de desempenho e histórico de equipamentos. Ele me permite entregar relatórios precisos e gestão baseada em dados reais.</p>
-      <div class="sis-aviso">⚠ O Mantto é a ferramenta que uso para trabalhar melhor. Meu produto é o resultado que entrego — não o sistema em si.</div>
+      <div class="sis-badge" data-i18n="sis_badge">⚙ Ferramenta de Apoio — Não é o produto principal</div>
+      <h2 class="section-title" data-i18n="sis_title">Gestão com <em>dados reais</em></h2>
+      <p class="sis-desc" data-i18n="sis_desc">Para apoiar minha atuação, desenvolvi o <strong>Mantto</strong> — um sistema que centraliza ordens de serviço, indicadores de desempenho e histórico de equipamentos. Ele me permite entregar relatórios precisos e gestão baseada em dados reais.</p>
+      <div class="sis-aviso" data-i18n="sis_aviso">⚠ O Mantto é a ferramenta que uso para trabalhar melhor. Meu produto é o resultado que entrego — não o sistema em si.</div>
       <div class="sis-features" style="margin-top:1.5rem">
-        <div class="sis-feat">Ordens de Serviço com histórico completo por equipamento</div>
-        <div class="sis-feat">Indicadores MTBF, MTTR, OEE e disponibilidade em tempo real</div>
-        <div class="sis-feat">Controle de estoque de peças e insumos</div>
-        <div class="sis-feat">Relatórios com fotos e documentação técnica</div>
-        <div class="sis-feat">Registro de melhorias e análises de causa raiz</div>
+        <div class="sis-feat" data-i18n="sis_feat1">Ordens de Serviço com histórico completo por equipamento</div>
+        <div class="sis-feat" data-i18n="sis_feat2">Indicadores MTBF, MTTR, OEE e disponibilidade em tempo real</div>
+        <div class="sis-feat" data-i18n="sis_feat3">Controle de estoque de peças e insumos</div>
+        <div class="sis-feat" data-i18n="sis_feat4">Relatórios com fotos e documentação técnica</div>
+        <div class="sis-feat" data-i18n="sis_feat5">Registro de melhorias e análises de causa raiz</div>
       </div>
-      <a href="https://mantto.app.br" target="_blank" class="sis-link">Conhecer o sistema →</a>
+      <a href="https://mantto.app.br" target="_blank" class="sis-link" data-i18n="sis_link">Conhecer o sistema →</a>
     </div>
     <div class="sis-visual">
-      <div class="sis-visual-title">Indicadores acompanhados</div>
+      <div class="sis-visual-title" data-i18n="sis_kpi_title">Indicadores acompanhados</div>
       <div class="kpi-grid">
-        <div class="kpi-item"><div class="kpi-val">↑ MTBF</div><div class="kpi-label">Tempo médio entre falhas</div></div>
-        <div class="kpi-item"><div class="kpi-val">↓ MTTR</div><div class="kpi-label">Tempo médio de reparo</div></div>
-        <div class="kpi-item"><div class="kpi-val">OEE</div><div class="kpi-label">Eficiência global do equipamento</div></div>
-        <div class="kpi-item"><div class="kpi-val">92%+</div><div class="kpi-label">Disponibilidade operacional</div></div>
+        <div class="kpi-item"><div class="kpi-val">↑ MTBF</div><div class="kpi-label" data-i18n="kpi1">Tempo médio entre falhas</div></div>
+        <div class="kpi-item"><div class="kpi-val">↓ MTTR</div><div class="kpi-label" data-i18n="kpi2">Tempo médio de reparo</div></div>
+        <div class="kpi-item"><div class="kpi-val">OEE</div><div class="kpi-label" data-i18n="kpi3">Eficiência global do equipamento</div></div>
+        <div class="kpi-item"><div class="kpi-val">92%+</div><div class="kpi-label" data-i18n="kpi4">Disponibilidade operacional</div></div>
       </div>
     </div>
   </div>
@@ -485,20 +506,20 @@ footer{background:#0c1510;text-align:center;padding:1.5rem;font-size:0.72rem;col
 
 <!-- FORMAÇÃO -->
 <section class="section formacao" id="formacao">
-  <div class="section-eyebrow">Formação & Qualificação</div>
-  <h2 class="section-title">Base técnica <em>sólida</em></h2>
+  <div class="section-eyebrow" data-i18n="form_eyebrow">Formação & Qualificação</div>
+  <h2 class="section-title" data-i18n="form_title">Base técnica <em>sólida</em></h2>
   <div class="form-grid">
     <div>
-      <div class="form-col-title">Formação Técnica</div>
-      <div class="form-item"><div class="form-titulo">Técnico em Mecânica Industrial</div><div class="form-inst">Formação técnica profissionalizante</div><span class="form-status status-concluido">Concluído</span></div>
-      <div class="form-item"><div class="form-titulo">Técnico em Automação Industrial</div><div class="form-inst">Formação técnica profissionalizante</div><span class="form-status status-concluido">Concluído</span></div>
-      <div class="form-item"><div class="form-titulo">Tecnólogo em Gestão da Produção Industrial</div><div class="form-inst">Ensino Superior Tecnológico</div><span class="form-status status-andamento">Em andamento</span></div>
+      <div class="form-col-title" data-i18n="form_col1">Formação Técnica</div>
+      <div class="form-item"><div class="form-titulo" data-i18n="form1_titulo">Técnico em Mecânica Industrial</div><div class="form-inst" data-i18n="form1_inst">Formação técnica profissionalizante</div><span class="form-status status-concluido" data-i18n="status_done">Concluído</span></div>
+      <div class="form-item"><div class="form-titulo" data-i18n="form2_titulo">Técnico em Automação Industrial</div><div class="form-inst" data-i18n="form2_inst">Formação técnica profissionalizante</div><span class="form-status status-concluido" data-i18n="status_done">Concluído</span></div>
+      <div class="form-item"><div class="form-titulo" data-i18n="form3_titulo">Tecnólogo em Gestão da Produção Industrial</div><div class="form-inst" data-i18n="form3_inst">Ensino Superior Tecnológico</div><span class="form-status status-andamento" data-i18n="status_ongoing">Em andamento</span></div>
     </div>
     <div>
-      <div class="form-col-title">Experiência Comprovada</div>
-      <div class="form-item"><div class="form-titulo">Planejamento e Controle de Manutenção (PCM)</div><div class="form-inst">15 anos de aplicação prática em ambiente industrial</div><span class="form-status status-concluido">Aplicado em produção</span></div>
-      <div class="form-item"><div class="form-titulo">Gestão de Confiabilidade Operacional</div><div class="form-inst">MTBF, MTTR, OEE, análise de criticidade e disponibilidade</div><span class="form-status status-concluido">Resultados documentados</span></div>
-      <div class="form-item"><div class="form-titulo">Melhoria Contínua Industrial</div><div class="form-inst">Casos reais com problema, solução e resultado mensuráveis</div><span class="form-status status-concluido">Cases disponíveis</span></div>
+      <div class="form-col-title" data-i18n="form_col2">Experiência Comprovada</div>
+      <div class="form-item"><div class="form-titulo" data-i18n="form4_titulo">Planejamento e Controle de Manutenção (PCM)</div><div class="form-inst" data-i18n="form4_inst">15 anos de aplicação prática em ambiente industrial</div><span class="form-status status-concluido" data-i18n="status_applied">Aplicado em produção</span></div>
+      <div class="form-item"><div class="form-titulo" data-i18n="form5_titulo">Gestão de Confiabilidade Operacional</div><div class="form-inst" data-i18n="form5_inst">MTBF, MTTR, OEE, análise de criticidade e disponibilidade</div><span class="form-status status-concluido" data-i18n="status_documented">Resultados documentados</span></div>
+      <div class="form-item"><div class="form-titulo" data-i18n="form6_titulo">Melhoria Contínua Industrial</div><div class="form-inst" data-i18n="form6_inst">Casos reais com problema, solução e resultado mensuráveis</div><span class="form-status status-concluido" data-i18n="status_available">Cases disponíveis</span></div>
     </div>
   </div>
 </section>
@@ -506,69 +527,377 @@ footer{background:#0c1510;text-align:center;padding:1.5rem;font-size:0.72rem;col
 <!-- CONTATO -->
 <section class="section contato" id="contato">
   <div class="contato-inner">
-    <div class="section-eyebrow">Vamos trabalhar juntos</div>
-    <h2 class="section-title" style="color:white">Sua operação merece<br>parar <em>menos.</em></h2>
+    <div class="section-eyebrow" data-i18n="cont_eyebrow">Vamos trabalhar juntos</div>
+    <h2 class="section-title" style="color:white" data-i18n="cont_title">Sua operação merece<br>parar <em>menos.</em></h2>
     <div class="contato-taglines">
-      <span>"Resultados reais aplicados na indústria."</span>
-      <span class="destaque">"Menos falhas. Mais confiabilidade."</span>
-      <span>"Transformando problemas recorrentes em melhorias permanentes."</span>
+      <span data-i18n="cont_tag1">"Resultados reais aplicados na indústria."</span>
+      <span class="destaque" data-i18n="cont_tag2">"Menos falhas. Mais confiabilidade."</span>
+      <span data-i18n="cont_tag3">"Transformando problemas recorrentes em melhorias permanentes."</span>
     </div>
-    <p class="contato-desc">Se você quer organizar a manutenção, eliminar falhas recorrentes e aumentar a disponibilidade operacional da sua empresa — vamos conversar. Sem compromisso.</p>
+    <p class="contato-desc" data-i18n="cont_desc">Se você quer organizar a manutenção, eliminar falhas recorrentes e aumentar a disponibilidade operacional da sua empresa — vamos conversar. Sem compromisso.</p>
     <div class="contato-links">
-      <a href="https://www.linkedin.com/in/wanderson-carvalho-teixeira-29841922a" target="_blank" class="clink clink-gold">💼 Falar no LinkedIn</a>
-      <a href="#cases" class="clink clink-ghost">📋 Ver Cases Reais</a>
+      <a href="https://www.linkedin.com/in/wanderson-carvalho-teixeira-29841922a" target="_blank" class="clink clink-gold">💼 <span data-i18n="cta_linkedin">Falar no LinkedIn</span></a>
+      <a href="https://wa.me/5531999737090" target="_blank" class="clink clink-whatsapp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-i18n="cta_whatsapp">Falar no WhatsApp</span>
+      </a>
+      <a href="#cases" class="clink clink-ghost"><span data-i18n="cta_cases">📋 Ver Cases Reais</span></a>
     </div>
   </div>
 </section>
 
-<footer>© 2026 Wanderson Carvalho Teixeira — Soluções em Manutenção Industrial & Confiabilidade Operacional</footer>
+<footer data-i18n="footer">© 2026 Wanderson Carvalho Teixeira — Soluções em Manutenção Industrial & Confiabilidade Operacional</footer>
 
 <script>
 var CASES = [
-  {id:1,titulo:"Conjunto de Escovas 01",categoria:"Qualidade",data:"25/01/2026",descricao:"Eixo motor desacoplado do conjunto de escovas causando falha na transmissão de movimento. Análise identificou 5 pontos críticos de falha simultâneos.",resultado:"Problema eliminado na raiz. Equipamento operando sem falhas após intervenção.",link:"https://leafy-kashata-1adf57.netlify.app/"},
-  {id:2,titulo:"Torre de Refrigeração",categoria:"Processo",data:"07/01/2026",descricao:"Distribuição irregular de água reduzia a eficiência do resfriamento, comprometendo a qualidade do processo produtivo. Causa raiz identificada nos pontos de saída obstruídos.",resultado:"Eficiência do resfriamento restabelecida. Processo produtivo normalizado.",link:"https://silly-bublanina-55f5b1.netlify.app/"},
-  {id:3,titulo:"Reforma Misturador 01",categoria:"Produtividade",data:"30/12/2025",descricao:"Misturador com desgaste crítico em múltiplos componentes: rolamentos, eixo helicoidal e resistências elétricas. Risco de parada total iminente.",resultado:"Confiabilidade operacional restabelecida. Redução de vibrações e aumento da vida útil dos componentes.",link:"https://wctmanutencao-lab.github.io/Misturador-01"},
-  {id:4,titulo:"Bomba de Circulação — Falha Crônica",categoria:"Processo",data:"02/11/2025",descricao:"Bomba travava de forma recorrente causando paradas gerais da fábrica. O problema era tratado de forma reativa há meses sem investigação da causa real.",resultado:"Causa raiz identificada e eliminada. Paradas recorrentes cessaram após intervenção definitiva.",link:"https://remarkable-florentine-9a2610.netlify.app/"},
-  {id:5,titulo:"Adaptação Peneira SAGEC",categoria:"Produtividade",data:"02/04/2026",descricao:"Peneira original incapaz de processar material de varrição contaminado com pedras, madeira, borracha e metal. Material virgem era desperdiçado junto com os contaminantes.",resultado:"Sistema duplo de telas permite separação eficaz. Material limpo direto no moinho. Custo de implementação: R$600.",link:"https://wctmanutencao-lab.github.io/relatorio-peneira.html"}
+  {id:1,
+    pt:{titulo:"Conjunto de Escovas 01",categoria:"Qualidade",descricao:"Eixo motor desacoplado do conjunto de escovas causando falha na transmissão de movimento. Análise identificou 5 pontos críticos de falha simultâneos.",resultado:"Problema eliminado na raiz. Equipamento operando sem falhas após intervenção."},
+    en:{titulo:"Brush Assembly 01",categoria:"Quality",descricao:"Motor shaft decoupled from the brush assembly causing failure in motion transmission. Analysis identified 5 simultaneous critical failure points.",resultado:"Problem eliminated at the root. Equipment operating without failures after intervention."},
+    es:{titulo:"Conjunto de Escobillas 01",categoria:"Calidad",descricao:"Eje motor desacoplado del conjunto de escobillas causando falla en la transmisión de movimiento. El análisis identificó 5 puntos críticos de falla simultáneos.",resultado:"Problema eliminado en la raíz. Equipo operando sin fallas tras la intervención."},
+    data:"25/01/2026",link:"https://leafy-kashata-1adf57.netlify.app/"},
+  {id:2,
+    pt:{titulo:"Torre de Refrigeração",categoria:"Processo",descricao:"Distribuição irregular de água reduzia a eficiência do resfriamento, comprometendo a qualidade do processo produtivo. Causa raiz identificada nos pontos de saída obstruídos.",resultado:"Eficiência do resfriamento restabelecida. Processo produtivo normalizado."},
+    en:{titulo:"Cooling Tower",categoria:"Process",descricao:"Irregular water distribution reduced cooling efficiency, compromising the quality of the production process. Root cause identified in blocked outlet points.",resultado:"Cooling efficiency restored. Production process normalized."},
+    es:{titulo:"Torre de Refrigeración",categoria:"Proceso",descricao:"La distribución irregular de agua reducía la eficiencia del enfriamiento, comprometiendo la calidad del proceso productivo. Causa raíz identificada en los puntos de salida obstruidos.",resultado:"Eficiencia de enfriamiento restablecida. Proceso productivo normalizado."},
+    data:"07/01/2026",link:"https://silly-bublanina-55f5b1.netlify.app/"},
+  {id:3,
+    pt:{titulo:"Reforma Misturador 01",categoria:"Produtividade",descricao:"Misturador com desgaste crítico em múltiplos componentes: rolamentos, eixo helicoidal e resistências elétricas. Risco de parada total iminente.",resultado:"Confiabilidade operacional restabelecida. Redução de vibrações e aumento da vida útil dos componentes."},
+    en:{titulo:"Mixer 01 Overhaul",categoria:"Productivity",descricao:"Mixer with critical wear on multiple components: bearings, helical shaft, and electrical resistors. Risk of imminent total shutdown.",resultado:"Operational reliability restored. Vibration reduction and increased component lifespan."},
+    es:{titulo:"Reforma Mezclador 01",categoria:"Productividad",descricao:"Mezclador con desgaste crítico en múltiples componentes: rodamientos, eje helicoidal y resistencias eléctricas. Riesgo de parada total inminente.",resultado:"Confiabilidad operacional restablecida. Reducción de vibraciones y aumento de la vida útil de los componentes."},
+    data:"30/12/2025",link:"https://wctmanutencao-lab.github.io/Misturador-01"},
+  {id:4,
+    pt:{titulo:"Bomba de Circulação — Falha Crônica",categoria:"Processo",descricao:"Bomba travava de forma recorrente causando paradas gerais da fábrica. O problema era tratado de forma reativa há meses sem investigação da causa real.",resultado:"Causa raiz identificada e eliminada. Paradas recorrentes cessaram após intervenção definitiva."},
+    en:{titulo:"Circulation Pump — Chronic Failure",categoria:"Process",descricao:"Pump jammed recurrently causing general factory shutdowns. The problem had been treated reactively for months without investigating the real cause.",resultado:"Root cause identified and eliminated. Recurring stoppages ceased after definitive intervention."},
+    es:{titulo:"Bomba de Circulación — Falla Crónica",categoria:"Proceso",descricao:"La bomba se trababa de forma recurrente causando paradas generales de la fábrica. El problema era tratado de forma reactiva durante meses sin investigar la causa real.",resultado:"Causa raíz identificada y eliminada. Las paradas recurrentes cesaron tras la intervención definitiva."},
+    data:"02/11/2025",link:"https://remarkable-florentine-9a2610.netlify.app/"},
+  {id:5,
+    pt:{titulo:"Adaptação Peneira SAGEC",categoria:"Produtividade",descricao:"Peneira original incapaz de processar material de varrição contaminado com pedras, madeira, borracha e metal. Material virgem era desperdiçado junto com os contaminantes.",resultado:"Sistema duplo de telas permite separação eficaz. Material limpo direto no moinho. Custo de implementação: R$600."},
+    en:{titulo:"SAGEC Screen Adaptation",categoria:"Productivity",descricao:"Original screen unable to process sweeping material contaminated with stones, wood, rubber, and metal. Virgin material was wasted along with contaminants.",resultado:"Dual screen system allows effective separation. Clean material goes directly to the mill. Implementation cost: R$600."},
+    es:{titulo:"Adaptación Tamiz SAGEC",categoria:"Productividad",descricao:"Tamiz original incapaz de procesar material de barrido contaminado con piedras, madera, goma y metal. El material virgen se desperdiciaba junto con los contaminantes.",resultado:"Sistema doble de mallas permite separación eficaz. Material limpio directo al molino. Costo de implementación: R$600."},
+    data:"02/04/2026",link:"https://wctmanutencao-lab.github.io/relatorio-peneira.html"}
 ];
 
-var catAtiva='Todos';
+// Labels de UI dos cases por idioma
+var CASES_UI = {
+  pt:{ todos:"Todos os cases", resultado:"Resultado:", verRelatorio:"Ver relatório completo", vazio:"Nenhum case nesta categoria." },
+  en:{ todos:"All cases", resultado:"Result:", verRelatorio:"View full report", vazio:"No cases in this category." },
+  es:{ todos:"Todos los casos", resultado:"Resultado:", verRelatorio:"Ver informe completo", vazio:"Ningún caso en esta categoría." }
+};
+
+var currentLang = 'pt';
+var catAtiva = 'Todos';
 function getCat(c){return c.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s/g,'');}
 
 function renderCases(){
-  var cats=['Todos'];
-  CASES.forEach(function(m){if(cats.indexOf(m.categoria)===-1)cats.push(m.categoria);});
-  var f=document.getElementById('filtros');
-  f.innerHTML='';
+  var lang = currentLang;
+  var ui = CASES_UI[lang] || CASES_UI['pt'];
+  // Categorias no idioma atual
+  var cats = [ui.todos];
+  CASES.forEach(function(m){
+    var cat = (m[lang]||m['pt']).categoria;
+    if(cats.indexOf(cat)===-1) cats.push(cat);
+  });
+  var f = document.getElementById('filtros');
+  f.innerHTML = '';
   cats.forEach(function(cat){
-    var b=document.createElement('button');
-    b.className='case-filtro'+(cat===catAtiva?' ativo':'');
-    b.textContent=cat==='Todos'?'Todos os cases':cat;
-    b.onclick=function(){catAtiva=cat;renderCases();};
+    var b = document.createElement('button');
+    b.className = 'case-filtro'+(cat===catAtiva?' ativo':'');
+    b.textContent = cat;
+    b.onclick = function(){catAtiva=cat;renderCases();};
     f.appendChild(b);
   });
-  var lista=catAtiva==='Todos'?CASES:CASES.filter(function(m){return m.categoria===catAtiva;});
-  var g=document.getElementById('cases-grid');
-  if(!lista.length){g.innerHTML='<div class="cases-vazio">Nenhum case nesta categoria.</div>';return;}
-  g.innerHTML='';
+  // Filtrar
+  var lista;
+  if(catAtiva===ui.todos || catAtiva==='Todos'){
+    lista = CASES;
+  } else {
+    lista = CASES.filter(function(m){ return (m[lang]||m['pt']).categoria===catAtiva; });
+  }
+  var g = document.getElementById('cases-grid');
+  if(!lista.length){g.innerHTML='<div class="cases-vazio">'+ui.vazio+'</div>';return;}
+  g.innerHTML = '';
   lista.forEach(function(m,i){
-    var cat=getCat(m.categoria);
-    var c=document.createElement('div');
-    c.className='case-card case-'+cat;
-    c.style.cssText='animation:fadeIn 0.4s '+(i*0.08)+'s ease both;opacity:0';
-    c.innerHTML=
-      '<div class="case-top"><span class="case-cat cat-'+cat+'">'+m.categoria+'</span><span class="case-data">'+m.data+'</span></div>'+
-      '<div class="case-titulo">'+m.titulo+'</div>'+
-      '<div class="case-desc">'+m.descricao+'</div>'+
-      '<div class="case-resultado">✅ <strong>Resultado:</strong> '+m.resultado+'</div>'+
+    var d = m[lang] || m['pt'];
+    var cat = getCat(d.categoria);
+    var c = document.createElement('div');
+    c.className = 'case-card case-'+cat;
+    c.style.cssText = 'animation:fadeIn 0.4s '+(i*0.08)+'s ease both;opacity:0';
+    c.innerHTML =
+      '<div class="case-top"><span class="case-cat cat-'+cat+'">'+d.categoria+'</span><span class="case-data">'+m.data+'</span></div>'+
+      '<div class="case-titulo">'+d.titulo+'</div>'+
+      '<div class="case-desc">'+d.descricao+'</div>'+
+      '<div class="case-resultado">✅ <strong>'+ui.resultado+'</strong> '+d.resultado+'</div>'+
       '<a class="case-link" href="'+m.link+'" target="_blank">'+
         '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>'+
-        'Ver relatório completo'+
+        ui.verRelatorio+
       '</a>';
     g.appendChild(c);
   });
 }
 renderCases();
+</script>
+<script>
+// ========== SISTEMA DE TRADUÇÃO / TRANSLATION ENGINE ==========
+var TRANSLATIONS = {
+  pt: {
+    // NAV
+    nav_about:"Sobre", nav_forwhom:"Para quem", nav_services:"Soluções",
+    nav_cases:"Cases", nav_how:"Como trabalho", nav_cta:"Fale Comigo",
+    // HERO
+    hero_eyebrow:"Soluções em Manutenção Industrial",
+    hero_h1:"Menos falhas.<br>Mais <em>confiabilidade.</em>",
+    hero_sub:"Organizo a manutenção da sua indústria, elimino falhas recorrentes e implanto confiabilidade operacional com metodologia comprovada e resultados mensuráveis.",
+    hero_tagline:'"Transformando problemas recorrentes em melhorias permanentes."',
+    stat_exp:"Anos de experiência", stat_cases:"Cases documentados", stat_pcm:"Gestão & Indicadores",
+    cta_reduce:"Quero Reduzir Falhas →", cta_results:"Ver Resultados Reais",
+    // HERO CARDS
+    hcard1_title:"Redução de Paradas Não Planejadas", hcard1_desc:"Diagnóstico e planos preventivos que eliminam as falhas antes que elas parem sua produção.",
+    hcard2_title:"Organização da Manutenção (PCM)", hcard2_desc:"Indicadores reais: MTBF, MTTR, OEE e disponibilidade sob controle.",
+    hcard3_title:"Eliminação de Causas Raiz", hcard3_desc:"Análise técnica para resolver o problema de verdade — não apenas tratar o sintoma.",
+    hcard4_title:"Aumento de Disponibilidade", hcard4_desc:"Mais horas de máquina rodando, menos custo de manutenção corretiva emergencial.",
+    // POSICIONAMENTO
+    pos_eyebrow:"Quem sou eu",
+    pos_title:"15 anos<br>resolvendo <em>problemas</em><br>industriais reais",
+    pos_quote:'"Não vendo software. Vendo resultado operacional. Minha entrega é sua máquina funcionando."',
+    pos_text1:"Iniciei minha carreira como mecânico industrial e evoluí ao longo de 15 anos para a gestão completa da manutenção. Atualmente sou o único responsável pelo setor de manutenção de uma indústria — coordenando desde a execução técnica até os indicadores estratégicos de confiabilidade.",
+    pos_text2:"Sou Técnico em Mecânica Industrial, Técnico em Automação Industrial e estou cursando Tecnólogo em Gestão da Produção Industrial. Esse conjunto de formações me permite enxergar o problema tanto do chão de fábrica quanto da gestão.",
+    dif1_title:"Experiência Real de Chão de Fábrica", dif1_desc:"Cada solução que proponho foi testada na prática. Não trabalho com teoria — trabalho com resultado mensurável.",
+    dif2_title:"Visão Técnica + Visão de Gestão", dif2_desc:"Combino o conhecimento técnico de mecânica e automação com a gestão estratégica da manutenção via PCM e indicadores.",
+    dif3_title:"Casos Documentados com Resultados", dif3_desc:"Cada intervenção gera um relatório completo: problema, causa raiz, solução aplicada e resultado comprovado.",
+    dif4_title:"Foco Total em Confiabilidade", dif4_desc:"Meu objetivo é que sua operação funcione sem surpresas. Menos paradas, mais produção, menos custo.",
+    // BENEFICIA
+    ben_eyebrow:"Para quem é", ben_title:"Quem pode se <em>beneficiar</em>",
+    ben_sub:"Se a sua empresa tem algum desses cenários, posso ajudar a transformar a situação com método, experiência e resultados documentados.",
+    ben1_title:"Pequenas e Médias Indústrias", ben1_desc:"Empresas que precisam profissionalizar a manutenção sem criar uma estrutura pesada — resultado com custo controlado.",
+    ben2_title:"Operações com Falhas Recorrentes", ben2_desc:"Máquinas que param sempre nos mesmos pontos. Problemas que voltam porque nunca foi atacada a causa raiz real.",
+    ben3_title:"Empresas sem Histórico de Manutenção", ben3_desc:"Sem registros, sem indicadores, sem planejamento. Implanto do zero um sistema de gestão eficiente e sustentável.",
+    ben4_title:"Empresas sem PCM Implantado", ben4_desc:"Manutenção ainda totalmente corretiva e reativa. Estruturo o planejamento preventivo e os indicadores de desempenho.",
+    ben5_title:"Custo de Manutenção Elevado", ben5_desc:"Gastos com peças, retrabalho e emergências fora de controle. Identifico os gargalos e reduzo o custo total de manutenção.",
+    ben6_title:"Manutenção Pouco Estruturada", ben6_desc:"Equipe sem processo, sem padrão e sem ferramentas. Organizo o setor para gerar resultado consistente e previsível.",
+    ben_cta_p:'"Se você se identificou com algum desses cenários, já é hora de agir."', ben_cta_btn:"Quero Resolver Isso →",
+    // SERVIÇOS
+    serv_eyebrow:"Soluções oferecidas", serv_title:"Confiabilidade operacional<br>como <em>resultado</em>",
+    serv_sub:"Cada solução é aplicada com diagnóstico, plano de ação e acompanhamento de indicadores. Sem achismo — com método e resultado.",
+    serv1_title:"Diagnóstico da Manutenção", serv1_desc:"Levantamento completo do cenário atual: equipamentos críticos, histórico de falhas, gaps de processo e oportunidades de melhoria. Entrego um relatório com plano de ação priorizado.", serv1_tag1:"Diagnóstico", serv1_tag2:"Criticidade", serv1_tag3:"Plano de Ação",
+    serv2_title:"Implantação de PCM", serv2_desc:"Estruturação completa do Planejamento e Controle de Manutenção. Planos preventivos, ordens de serviço, indicadores (MTBF, MTTR, OEE) e gestão de ativos implantados do zero.", serv2_tag4:"Gestão de Ativos",
+    serv3_title:"Eliminação de Falhas Crônicas", serv3_desc:"Análise de causa raiz dos problemas recorrentes que geram paradas, desperdícios e custos ocultos. Implementação de solução definitiva com acompanhamento do resultado.", serv3_tag1:"Causa Raiz", serv3_tag3:"Melhoria Contínua",
+    serv4_title:"Manutenção Preventiva e Preditiva", serv4_desc:"Criação de planos baseados na criticidade dos equipamentos e histórico de falhas. Redução do custo de manutenção e aumento da disponibilidade dos ativos.", serv4_tag1:"Preventiva", serv4_tag2:"Preditiva", serv4_tag3:"Lubrificação",
+    serv5_title:"Confiabilidade Operacional", serv5_desc:"Implantação de metodologia de confiabilidade para garantir disponibilidade máxima dos equipamentos críticos. Gestão proativa com indicadores em tempo real e tomada de decisão baseada em dados.", serv5_tag1:"Confiabilidade", serv5_tag2:"Disponibilidade",
+    serv6_title:"Gestão de Melhoria Contínua", serv6_desc:"Estruturação do sistema de registro, análise e acompanhamento de melhorias. Transformo o conhecimento técnico da sua equipe em processos documentados, padronizados e replicáveis.", serv6_tag1:"Melhoria Contínua", serv6_tag3:"Padronização",
+    // CASES
+    cases_eyebrow:"Resultados comprovados", cases_title:"Cases reais com <em>resultados</em> documentados",
+    cases_sub:"Cada caso registrado com situação inicial, intervenção realizada, causa raiz identificada e resultado obtido. Clique para ver o relatório completo com fotos.",
+    // COMO TRABALHO
+    como_eyebrow:"Processo de trabalho", como_title:"Como <em>trabalho</em>",
+    como_sub:"Um processo estruturado e transparente. Do primeiro contato até o resultado documentado — sem achismo, sem improviso.",
+    etapa1_title:"Levantamento dos Ativos", etapa1_desc:"Mapeamento completo dos equipamentos, criticidade, histórico disponível e situação atual da manutenção.",
+    etapa2_title:"Diagnóstico dos Problemas", etapa2_desc:"Análise técnica detalhada para entender quais problemas impactam mais a disponibilidade e o custo operacional.",
+    etapa3_title:"Identificação da Causa Raiz", etapa3_desc:"Investigação técnica para encontrar a causa real — não apenas o sintoma — de cada falha recorrente.",
+    etapa4_title:"Plano de Ação", etapa4_desc:"Definição das intervenções prioritárias, prazos, recursos necessários e metas de indicadores a alcançar.",
+    etapa5_title:"Implementação das Melhorias", etapa5_desc:"Execução com documentação fotográfica, registro técnico completo e acompanhamento de cada etapa.",
+    etapa6_title:"Acompanhamento dos Resultados", etapa6_desc:"Monitoramento dos indicadores pós-intervenção e entrega de relatório final com resultados mensuráveis.",
+    // SISTEMA
+    sis_eyebrow:"Ferramenta de apoio", sis_badge:"⚙ Ferramenta de Apoio — Não é o produto principal",
+    sis_title:"Gestão com <em>dados reais</em>",
+    sis_desc:"Para apoiar minha atuação, desenvolvi o <strong>Mantto</strong> — um sistema que centraliza ordens de serviço, indicadores de desempenho e histórico de equipamentos. Ele me permite entregar relatórios precisos e gestão baseada em dados reais.",
+    sis_aviso:"⚠ O Mantto é a ferramenta que uso para trabalhar melhor. Meu produto é o resultado que entrego — não o sistema em si.",
+    sis_feat1:"Ordens de Serviço com histórico completo por equipamento", sis_feat2:"Indicadores MTBF, MTTR, OEE e disponibilidade em tempo real",
+    sis_feat3:"Controle de estoque de peças e insumos", sis_feat4:"Relatórios com fotos e documentação técnica", sis_feat5:"Registro de melhorias e análises de causa raiz",
+    sis_link:"Conhecer o sistema →", sis_kpi_title:"Indicadores acompanhados",
+    kpi1:"Tempo médio entre falhas", kpi2:"Tempo médio de reparo", kpi3:"Eficiência global do equipamento", kpi4:"Disponibilidade operacional",
+    // FORMAÇÃO
+    form_eyebrow:"Formação & Qualificação", form_title:"Base técnica <em>sólida</em>",
+    form_col1:"Formação Técnica", form_col2:"Experiência Comprovada",
+    form1_titulo:"Técnico em Mecânica Industrial", form1_inst:"Formação técnica profissionalizante",
+    form2_titulo:"Técnico em Automação Industrial", form2_inst:"Formação técnica profissionalizante",
+    form3_titulo:"Tecnólogo em Gestão da Produção Industrial", form3_inst:"Ensino Superior Tecnológico",
+    form4_titulo:"Planejamento e Controle de Manutenção (PCM)", form4_inst:"15 anos de aplicação prática em ambiente industrial",
+    form5_titulo:"Gestão de Confiabilidade Operacional", form5_inst:"MTBF, MTTR, OEE, análise de criticidade e disponibilidade",
+    form6_titulo:"Melhoria Contínua Industrial", form6_inst:"Casos reais com problema, solução e resultado mensuráveis",
+    status_done:"Concluído", status_ongoing:"Em andamento", status_applied:"Aplicado em produção", status_documented:"Resultados documentados", status_available:"Cases disponíveis",
+    // CONTATO
+    cont_eyebrow:"Vamos trabalhar juntos", cont_title:"Sua operação merece<br>parar <em>menos.</em>",
+    cont_tag1:'"Resultados reais aplicados na indústria."', cont_tag2:'"Menos falhas. Mais confiabilidade."', cont_tag3:'"Transformando problemas recorrentes em melhorias permanentes."',
+    cont_desc:"Se você quer organizar a manutenção, eliminar falhas recorrentes e aumentar a disponibilidade operacional da sua empresa — vamos conversar. Sem compromisso.",
+    cta_linkedin:"Falar no LinkedIn", cta_whatsapp:"Falar no WhatsApp", cta_cases:"📋 Ver Cases Reais",
+    footer:"© 2026 Wanderson Carvalho Teixeira — Soluções em Manutenção Industrial & Confiabilidade Operacional",
+    page_title:"Wanderson Teixeira — Soluções em Manutenção Industrial"
+  },
+  en: {
+    nav_about:"About", nav_forwhom:"Who benefits", nav_services:"Solutions",
+    nav_cases:"Cases", nav_how:"How I work", nav_cta:"Contact Me",
+    hero_eyebrow:"Industrial Maintenance Solutions",
+    hero_h1:"Less downtime.<br>More <em>reliability.</em>",
+    hero_sub:"I organize your industrial maintenance, eliminate recurring failures, and implement operational reliability using proven methodology and measurable results.",
+    hero_tagline:'"Turning recurring problems into permanent improvements."',
+    stat_exp:"Years of experience", stat_cases:"Documented cases", stat_pcm:"Management & KPIs",
+    cta_reduce:"Reduce Failures Now →", cta_results:"See Real Results",
+    hcard1_title:"Reduction of Unplanned Downtime", hcard1_desc:"Diagnosis and preventive plans that eliminate failures before they stop your production.",
+    hcard2_title:"Maintenance Organization (PCM)", hcard2_desc:"Real indicators: MTBF, MTTR, OEE and availability under control.",
+    hcard3_title:"Root Cause Elimination", hcard3_desc:"Technical analysis to solve the real problem — not just treat the symptom.",
+    hcard4_title:"Availability Increase", hcard4_desc:"More machine hours running, less emergency corrective maintenance cost.",
+    pos_eyebrow:"Who I am",
+    pos_title:"15 years<br>solving <em>real</em><br>industrial problems",
+    pos_quote:'"I don\'t sell software. I sell operational results. My delivery is your machine running."',
+    pos_text1:"I started my career as an industrial mechanic and evolved over 15 years to full maintenance management. I am currently solely responsible for the maintenance department of an industry — coordinating from technical execution to strategic reliability indicators.",
+    pos_text2:"I am a Mechanical Engineering Technician, Industrial Automation Technician, and am pursuing a degree in Industrial Production Management. This combination of training allows me to see problems from both the shop floor and management perspectives.",
+    dif1_title:"Real Shop Floor Experience", dif1_desc:"Every solution I propose has been tested in practice. I don't work with theory — I work with measurable results.",
+    dif2_title:"Technical + Management Vision", dif2_desc:"I combine technical knowledge of mechanics and automation with strategic maintenance management via PCM and indicators.",
+    dif3_title:"Documented Cases with Results", dif3_desc:"Each intervention generates a complete report: problem, root cause, applied solution, and proven result.",
+    dif4_title:"Total Focus on Reliability", dif4_desc:"My goal is for your operation to run without surprises. Less downtime, more production, less cost.",
+    ben_eyebrow:"Who it's for", ben_title:"Who can <em>benefit</em>",
+    ben_sub:"If your company has any of these scenarios, I can help transform the situation with method, experience, and documented results.",
+    ben1_title:"Small and Medium Industries", ben1_desc:"Companies that need to professionalize maintenance without creating a heavy structure — results with controlled cost.",
+    ben2_title:"Operations with Recurring Failures", ben2_desc:"Machines that always stop at the same points. Problems that return because the real root cause was never addressed.",
+    ben3_title:"Companies without Maintenance History", ben3_desc:"No records, no indicators, no planning. I implement from scratch an efficient and sustainable management system.",
+    ben4_title:"Companies without PCM Implemented", ben4_desc:"Maintenance still entirely corrective and reactive. I structure preventive planning and performance indicators.",
+    ben5_title:"High Maintenance Cost", ben5_desc:"Spending on parts, rework, and emergencies out of control. I identify bottlenecks and reduce total maintenance cost.",
+    ben6_title:"Poorly Structured Maintenance", ben6_desc:"Team without process, without standards and without tools. I organize the department to generate consistent and predictable results.",
+    ben_cta_p:'"If you identified with any of these scenarios, it\'s time to act."', ben_cta_btn:"I Want to Solve This →",
+    serv_eyebrow:"Solutions offered", serv_title:"Operational reliability<br>as a <em>result</em>",
+    serv_sub:"Each solution is applied with diagnosis, action plan, and indicator monitoring. No guesswork — with method and result.",
+    serv1_title:"Maintenance Diagnosis", serv1_desc:"Complete survey of the current scenario: critical equipment, failure history, process gaps, and improvement opportunities. I deliver a report with a prioritized action plan.", serv1_tag1:"Diagnosis", serv1_tag2:"Criticality", serv1_tag3:"Action Plan",
+    serv2_title:"PCM Implementation", serv2_desc:"Complete structuring of Maintenance Planning and Control. Preventive plans, work orders, indicators (MTBF, MTTR, OEE) and asset management implemented from scratch.", serv2_tag4:"Asset Management",
+    serv3_title:"Chronic Failure Elimination", serv3_desc:"Root cause analysis of recurring problems that generate downtime, waste, and hidden costs. Implementation of a definitive solution with result monitoring.", serv3_tag1:"Root Cause", serv3_tag3:"Continuous Improvement",
+    serv4_title:"Preventive and Predictive Maintenance", serv4_desc:"Creating plans based on equipment criticality and failure history. Reducing maintenance cost and increasing asset availability.", serv4_tag1:"Preventive", serv4_tag2:"Predictive", serv4_tag3:"Lubrication",
+    serv5_title:"Operational Reliability", serv5_desc:"Implementation of reliability methodology to ensure maximum availability of critical equipment. Proactive management with real-time indicators and data-driven decision making.", serv5_tag1:"Reliability", serv5_tag2:"Availability",
+    serv6_title:"Continuous Improvement Management", serv6_desc:"Structuring the system for recording, analyzing, and tracking improvements. I transform your team's technical knowledge into documented, standardized, and replicable processes.", serv6_tag1:"Continuous Improvement", serv6_tag3:"Standardization",
+    cases_eyebrow:"Proven results", cases_title:"Real cases with documented <em>results</em>",
+    cases_sub:"Each case recorded with initial situation, intervention performed, root cause identified, and result obtained. Click to see the full report with photos.",
+    como_eyebrow:"Work process", como_title:"How I <em>work</em>",
+    como_sub:"A structured and transparent process. From the first contact to the documented result — no guesswork, no improvisation.",
+    etapa1_title:"Asset Survey", etapa1_desc:"Complete mapping of equipment, criticality, available history, and current maintenance situation.",
+    etapa2_title:"Problem Diagnosis", etapa2_desc:"Detailed technical analysis to understand which problems most impact availability and operational cost.",
+    etapa3_title:"Root Cause Identification", etapa3_desc:"Technical investigation to find the real cause — not just the symptom — of each recurring failure.",
+    etapa4_title:"Action Plan", etapa4_desc:"Definition of priority interventions, deadlines, necessary resources, and indicator targets to achieve.",
+    etapa5_title:"Improvement Implementation", etapa5_desc:"Execution with photographic documentation, complete technical record, and monitoring of each step.",
+    etapa6_title:"Results Monitoring", etapa6_desc:"Post-intervention indicator monitoring and delivery of final report with measurable results.",
+    sis_eyebrow:"Support tool", sis_badge:"⚙ Support Tool — Not the main product",
+    sis_title:"Management with <em>real data</em>",
+    sis_desc:"To support my work, I developed <strong>Mantto</strong> — a system that centralizes work orders, performance indicators, and equipment history. It allows me to deliver accurate reports and data-driven management.",
+    sis_aviso:"⚠ Mantto is the tool I use to work better. My product is the result I deliver — not the system itself.",
+    sis_feat1:"Work orders with complete history per equipment", sis_feat2:"MTBF, MTTR, OEE and availability indicators in real time",
+    sis_feat3:"Parts and supplies inventory control", sis_feat4:"Reports with photos and technical documentation", sis_feat5:"Improvement records and root cause analyses",
+    sis_link:"Learn about the system →", sis_kpi_title:"Tracked indicators",
+    kpi1:"Mean time between failures", kpi2:"Mean time to repair", kpi3:"Overall equipment efficiency", kpi4:"Operational availability",
+    form_eyebrow:"Education & Qualifications", form_title:"Solid <em>technical</em> foundation",
+    form_col1:"Technical Training", form_col2:"Proven Experience",
+    form1_titulo:"Industrial Mechanics Technician", form1_inst:"Technical vocational training",
+    form2_titulo:"Industrial Automation Technician", form2_inst:"Technical vocational training",
+    form3_titulo:"Industrial Production Management Technologist", form3_inst:"Higher Technology Education",
+    form4_titulo:"Maintenance Planning and Control (PCM)", form4_inst:"15 years of practical application in industrial environment",
+    form5_titulo:"Operational Reliability Management", form5_inst:"MTBF, MTTR, OEE, criticality analysis and availability",
+    form6_titulo:"Industrial Continuous Improvement", form6_inst:"Real cases with measurable problems, solutions, and results",
+    status_done:"Completed", status_ongoing:"In progress", status_applied:"Applied in production", status_documented:"Documented results", status_available:"Cases available",
+    cont_eyebrow:"Let's work together", cont_title:"Your operation deserves<br>to stop <em>less.</em>",
+    cont_tag1:'"Real results applied in industry."', cont_tag2:'"Less failures. More reliability."', cont_tag3:'"Turning recurring problems into permanent improvements."',
+    cont_desc:"If you want to organize maintenance, eliminate recurring failures, and increase your company's operational availability — let's talk. No commitment.",
+    cta_linkedin:"Connect on LinkedIn", cta_whatsapp:"Chat on WhatsApp", cta_cases:"📋 View Real Cases",
+    footer:"© 2026 Wanderson Carvalho Teixeira — Industrial Maintenance Solutions & Operational Reliability",
+    page_title:"Wanderson Teixeira — Industrial Maintenance Solutions"
+  },
+  es: {
+    nav_about:"Sobre mí", nav_forwhom:"Para quién", nav_services:"Soluciones",
+    nav_cases:"Casos", nav_how:"Cómo trabajo", nav_cta:"Contáctame",
+    hero_eyebrow:"Soluciones en Mantenimiento Industrial",
+    hero_h1:"Menos fallas.<br>Más <em>confiabilidad.</em>",
+    hero_sub:"Organizo el mantenimiento de tu industria, elimino fallas recurrentes e implanto confiabilidad operacional con metodología probada y resultados medibles.",
+    hero_tagline:'"Convirtiendo problemas recurrentes en mejoras permanentes."',
+    stat_exp:"Años de experiencia", stat_cases:"Casos documentados", stat_pcm:"Gestión & Indicadores",
+    cta_reduce:"Quiero Reducir Fallas →", cta_results:"Ver Resultados Reales",
+    hcard1_title:"Reducción de Paradas No Planificadas", hcard1_desc:"Diagnóstico y planes preventivos que eliminan las fallas antes de que detengan tu producción.",
+    hcard2_title:"Organización del Mantenimiento (PCM)", hcard2_desc:"Indicadores reales: MTBF, MTTR, OEE y disponibilidad bajo control.",
+    hcard3_title:"Eliminación de Causas Raíz", hcard3_desc:"Análisis técnico para resolver el problema de verdad — no solo tratar el síntoma.",
+    hcard4_title:"Aumento de Disponibilidad", hcard4_desc:"Más horas de máquina funcionando, menor costo de mantenimiento correctivo de emergencia.",
+    pos_eyebrow:"Quién soy",
+    pos_title:"15 años<br>resolviendo <em>problemas</em><br>industriales reales",
+    pos_quote:'"No vendo software. Vendo resultado operacional. Mi entrega es tu máquina funcionando."',
+    pos_text1:"Comencé mi carrera como mecánico industrial y evolucioné durante 15 años hacia la gestión completa del mantenimiento. Actualmente soy el único responsable del departamento de mantenimiento de una industria — coordinando desde la ejecución técnica hasta los indicadores estratégicos de confiabilidad.",
+    pos_text2:"Soy Técnico en Mecánica Industrial, Técnico en Automatización Industrial y estoy cursando Tecnólogo en Gestión de la Producción Industrial. Este conjunto de formaciones me permite ver el problema tanto desde el piso de fábrica como desde la gestión.",
+    dif1_title:"Experiencia Real de Piso de Fábrica", dif1_desc:"Cada solución que propongo fue probada en la práctica. No trabajo con teoría — trabajo con resultado medible.",
+    dif2_title:"Visión Técnica + Visión de Gestión", dif2_desc:"Combino el conocimiento técnico de mecánica y automatización con la gestión estratégica del mantenimiento vía PCM e indicadores.",
+    dif3_title:"Casos Documentados con Resultados", dif3_desc:"Cada intervención genera un informe completo: problema, causa raíz, solución aplicada y resultado comprobado.",
+    dif4_title:"Enfoque Total en Confiabilidad", dif4_desc:"Mi objetivo es que tu operación funcione sin sorpresas. Menos paradas, más producción, menos costo.",
+    ben_eyebrow:"Para quién es", ben_title:"Quién puede <em>beneficiarse</em>",
+    ben_sub:"Si tu empresa tiene alguno de estos escenarios, puedo ayudar a transformar la situación con método, experiencia y resultados documentados.",
+    ben1_title:"Pequeñas y Medianas Industrias", ben1_desc:"Empresas que necesitan profesionalizar el mantenimiento sin crear una estructura pesada — resultado con costo controlado.",
+    ben2_title:"Operaciones con Fallas Recurrentes", ben2_desc:"Máquinas que siempre se detienen en los mismos puntos. Problemas que vuelven porque nunca se atacó la causa raíz real.",
+    ben3_title:"Empresas sin Historial de Mantenimiento", ben3_desc:"Sin registros, sin indicadores, sin planificación. Implemento desde cero un sistema de gestión eficiente y sostenible.",
+    ben4_title:"Empresas sin PCM Implementado", ben4_desc:"Mantenimiento aún totalmente correctivo y reactivo. Estructuro la planificación preventiva y los indicadores de desempeño.",
+    ben5_title:"Alto Costo de Mantenimiento", ben5_desc:"Gastos en piezas, retrabajo y emergencias fuera de control. Identifico los cuellos de botella y reduzco el costo total de mantenimiento.",
+    ben6_title:"Mantenimiento Poco Estructurado", ben6_desc:"Equipo sin proceso, sin estándar y sin herramientas. Organizo el sector para generar resultados consistentes y predecibles.",
+    ben_cta_p:'"Si te identificaste con alguno de estos escenarios, ya es hora de actuar."', ben_cta_btn:"Quiero Resolver Esto →",
+    serv_eyebrow:"Soluciones ofrecidas", serv_title:"Confiabilidad operacional<br>como <em>resultado</em>",
+    serv_sub:"Cada solución se aplica con diagnóstico, plan de acción y seguimiento de indicadores. Sin suposiciones — con método y resultado.",
+    serv1_title:"Diagnóstico del Mantenimiento", serv1_desc:"Relevamiento completo del escenario actual: equipos críticos, historial de fallas, brechas de proceso y oportunidades de mejora. Entrego un informe con plan de acción priorizado.", serv1_tag1:"Diagnóstico", serv1_tag2:"Criticidad", serv1_tag3:"Plan de Acción",
+    serv2_title:"Implantación de PCM", serv2_desc:"Estructuración completa de la Planificación y Control del Mantenimiento. Planes preventivos, órdenes de trabajo, indicadores (MTBF, MTTR, OEE) y gestión de activos implementados desde cero.", serv2_tag4:"Gestión de Activos",
+    serv3_title:"Eliminación de Fallas Crónicas", serv3_desc:"Análisis de causa raíz de los problemas recurrentes que generan paradas, desperdicios y costos ocultos. Implementación de solución definitiva con seguimiento del resultado.", serv3_tag1:"Causa Raíz", serv3_tag3:"Mejora Continua",
+    serv4_title:"Mantenimiento Preventivo y Predictivo", serv4_desc:"Creación de planes basados en la criticidad de los equipos e historial de fallas. Reducción del costo de mantenimiento y aumento de la disponibilidad de los activos.", serv4_tag1:"Preventivo", serv4_tag2:"Predictivo", serv4_tag3:"Lubricación",
+    serv5_title:"Confiabilidad Operacional", serv5_desc:"Implantación de metodología de confiabilidad para garantizar la máxima disponibilidad de los equipos críticos. Gestión proactiva con indicadores en tiempo real y toma de decisiones basada en datos.", serv5_tag1:"Confiabilidad", serv5_tag2:"Disponibilidad",
+    serv6_title:"Gestión de Mejora Continua", serv6_desc:"Estructuración del sistema de registro, análisis y seguimiento de mejoras. Transformo el conocimiento técnico de tu equipo en procesos documentados, estandarizados y replicables.", serv6_tag1:"Mejora Continua", serv6_tag3:"Estandarización",
+    cases_eyebrow:"Resultados comprobados", cases_title:"Casos reales con <em>resultados</em> documentados",
+    cases_sub:"Cada caso registrado con situación inicial, intervención realizada, causa raíz identificada y resultado obtenido. Haz clic para ver el informe completo con fotos.",
+    como_eyebrow:"Proceso de trabajo", como_title:"Cómo <em>trabajo</em>",
+    como_sub:"Un proceso estructurado y transparente. Desde el primer contacto hasta el resultado documentado — sin suposiciones, sin improvisación.",
+    etapa1_title:"Relevamiento de Activos", etapa1_desc:"Mapeo completo de equipos, criticidad, historial disponible y situación actual del mantenimiento.",
+    etapa2_title:"Diagnóstico de Problemas", etapa2_desc:"Análisis técnico detallado para entender qué problemas impactan más la disponibilidad y el costo operacional.",
+    etapa3_title:"Identificación de la Causa Raíz", etapa3_desc:"Investigación técnica para encontrar la causa real — no solo el síntoma — de cada falla recurrente.",
+    etapa4_title:"Plan de Acción", etapa4_desc:"Definición de las intervenciones prioritarias, plazos, recursos necesarios y metas de indicadores a alcanzar.",
+    etapa5_title:"Implementación de Mejoras", etapa5_desc:"Ejecución con documentación fotográfica, registro técnico completo y seguimiento de cada etapa.",
+    etapa6_title:"Seguimiento de Resultados", etapa6_desc:"Monitoreo de indicadores post-intervención y entrega de informe final con resultados medibles.",
+    sis_eyebrow:"Herramienta de apoyo", sis_badge:"⚙ Herramienta de Apoyo — No es el producto principal",
+    sis_title:"Gestión con <em>datos reales</em>",
+    sis_desc:"Para apoyar mi trabajo, desarrollé <strong>Mantto</strong> — un sistema que centraliza órdenes de trabajo, indicadores de desempeño e historial de equipos. Me permite entregar informes precisos y gestión basada en datos reales.",
+    sis_aviso:"⚠ Mantto es la herramienta que uso para trabajar mejor. Mi producto es el resultado que entrego — no el sistema en sí.",
+    sis_feat1:"Órdenes de Trabajo con historial completo por equipo", sis_feat2:"Indicadores MTBF, MTTR, OEE y disponibilidad en tiempo real",
+    sis_feat3:"Control de inventario de piezas e insumos", sis_feat4:"Informes con fotos y documentación técnica", sis_feat5:"Registro de mejoras y análisis de causa raíz",
+    sis_link:"Conocer el sistema →", sis_kpi_title:"Indicadores monitoreados",
+    kpi1:"Tiempo medio entre fallas", kpi2:"Tiempo medio de reparación", kpi3:"Eficiencia global del equipo", kpi4:"Disponibilidad operacional",
+    form_eyebrow:"Formación & Calificación", form_title:"Base técnica <em>sólida</em>",
+    form_col1:"Formación Técnica", form_col2:"Experiencia Comprobada",
+    form1_titulo:"Técnico en Mecánica Industrial", form1_inst:"Formación técnica profesionalizante",
+    form2_titulo:"Técnico en Automatización Industrial", form2_inst:"Formación técnica profesionalizante",
+    form3_titulo:"Tecnólogo en Gestión de la Producción Industrial", form3_inst:"Educación Superior Tecnológica",
+    form4_titulo:"Planificación y Control del Mantenimiento (PCM)", form4_inst:"15 años de aplicación práctica en ambiente industrial",
+    form5_titulo:"Gestión de Confiabilidad Operacional", form5_inst:"MTBF, MTTR, OEE, análisis de criticidad y disponibilidad",
+    form6_titulo:"Mejora Continua Industrial", form6_inst:"Casos reales con problema, solución y resultado medibles",
+    status_done:"Completado", status_ongoing:"En curso", status_applied:"Aplicado en producción", status_documented:"Resultados documentados", status_available:"Casos disponibles",
+    cont_eyebrow:"Trabajemos juntos", cont_title:"Tu operación merece<br>parar <em>menos.</em>",
+    cont_tag1:'"Resultados reales aplicados en la industria."', cont_tag2:'"Menos fallas. Más confiabilidad."', cont_tag3:'"Convirtiendo problemas recurrentes en mejoras permanentes."',
+    cont_desc:"Si quieres organizar el mantenimiento, eliminar fallas recurrentes y aumentar la disponibilidad operacional de tu empresa — hablemos. Sin compromiso.",
+    cta_linkedin:"Conectar en LinkedIn", cta_whatsapp:"Chatear en WhatsApp", cta_cases:"📋 Ver Casos Reales",
+    footer:"© 2026 Wanderson Carvalho Teixeira — Soluciones en Mantenimiento Industrial & Confiabilidad Operacional",
+    page_title:"Wanderson Teixeira — Soluciones en Mantenimiento Industrial"
+  }
+};
+
+function setLang(lang) {
+  var t = TRANSLATIONS[lang] || TRANSLATIONS['pt'];
+  currentLang = lang;
+  // Resetar filtro de categoria ao trocar idioma
+  var ui = CASES_UI[lang] || CASES_UI['pt'];
+  catAtiva = ui.todos;
+  // Update all data-i18n elements
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) {
+      el.innerHTML = t[key];
+    }
+  });
+  // Re-render cases with new language
+  renderCases();
+  // Update page title
+  if (t.page_title) document.title = t.page_title;
+  // Update html lang attr
+  document.documentElement.lang = lang;
+  // Update active flag button
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    btn.classList.remove('active');
+    if (btn.getAttribute('data-lang') === lang) {
+      btn.classList.add('active');
+    }
+  });
+}
 </script>
 </body>
 </html>
